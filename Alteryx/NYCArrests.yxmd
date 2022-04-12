@@ -112,9 +112,10 @@
                 <SelectField field="Input_#8_LawCode_SK" selected="True" />
                 <SelectField field="Input_#3_LawCat_SK" selected="True" />
                 <SelectField field="Input_#9_ArrestBoro_SK" selected="True" />
+                <SelectField field="Input_#10_JurisdictionCode_SK" selected="True" />
                 <SelectField field="Input_#1_Perpetrator_SK" selected="True" />
                 <SelectField field="Input_#2_Geo_SK" selected="True" />
-                <SelectField field="Input_#10_JurisdictionCode_SK" selected="True" />
+                <SelectField field="Input_#4_ARREST_PRECINCT" selected="True" />
                 <SelectField field="*Unknown" selected="False" />
               </SelectFields>
             </Configuration>
@@ -138,6 +139,7 @@
           <CommaDecimal value="False" />
           <SelectFields>
             <SelectField field="ARREST_KEY" selected="True" />
+            <SelectField field="ARREST_PRECINCT" selected="True" />
             <SelectField field="*Unknown" selected="False" />
           </SelectFields>
         </Configuration>

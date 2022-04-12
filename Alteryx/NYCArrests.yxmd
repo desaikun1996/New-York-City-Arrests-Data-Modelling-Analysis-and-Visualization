@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="1">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="66" y="54" />
+        <Position x="54" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -27,9 +27,6 @@
           <DefaultAnnotationText>NYPD_Arrest_Data__Year_to_Date_.tsv</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="ARREST_KEY" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
@@ -58,7 +55,7 @@
     </Node>
     <Node ToolID="3">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="162" y="54" />
+        <Position x="186" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -95,9 +92,66 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
     </Node>
+    <Node ToolID="113">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.JoinMultiple.JoinMultiple">
+        <Position x="2226" y="1038" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <JoinByRecPos value="True" />
+          <OutputJoinOnly value="False" />
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Input_#4_ARREST_KEY" selected="True" />
+                <SelectField field="Input_#5_Date_Key" selected="True" />
+                <SelectField field="Input_#6_PD_SK" selected="True" />
+                <SelectField field="Input_#7_KY_SK" selected="True" />
+                <SelectField field="Input_#8_LawCode_SK" selected="True" />
+                <SelectField field="Input_#3_LawCat_SK" selected="True" />
+                <SelectField field="Input_#9_ArrestBoro_SK" selected="True" />
+                <SelectField field="Input_#1_Perpetrator_SK" selected="True" />
+                <SelectField field="Input_#2_Geo_SK" selected="True" />
+                <SelectField field="Input_#10_JurisdictionCode_SK" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoinMultiple" />
+    </Node>
+    <Node ToolID="114">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1338" y="846" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="ARREST_KEY" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
     <Node ToolID="82">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="413" y="1361" width="1017" height="321" />
+        <Position x="401" y="1387" width="1113" height="319" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -115,7 +169,7 @@
       <ChildNodes>
         <Node ToolID="19">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="438" y="1506" />
+            <Position x="426" y="1530" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -153,7 +207,7 @@
         </Node>
         <Node ToolID="20">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-            <Position x="534" y="1506" />
+            <Position x="618" y="1530" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -171,7 +225,7 @@
         </Node>
         <Node ToolID="21">
           <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-            <Position x="630" y="1506" />
+            <Position x="714" y="1530" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -191,7 +245,7 @@
         </Node>
         <Node ToolID="25">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="810" y="1506" />
+            <Position x="906" y="1530" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -210,7 +264,7 @@
         </Node>
         <Node ToolID="26">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="726" y="1506" />
+            <Position x="810" y="1530" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -229,7 +283,7 @@
         </Node>
         <Node ToolID="27">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="918" y="1506" />
+            <Position x="1002" y="1530" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -248,7 +302,7 @@
         </Node>
         <Node ToolID="28">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1014" y="1506" />
+            <Position x="1098" y="1530" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -267,7 +321,7 @@
         </Node>
         <Node ToolID="29">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1098" y="1506" />
+            <Position x="1194" y="1530" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -285,7 +339,7 @@
         </Node>
         <Node ToolID="30">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1206" y="1506" />
+            <Position x="1290" y="1530" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -311,7 +365,7 @@
         </Node>
         <Node ToolID="38">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="1302" y="1506" />
+            <Position x="1386" y="1530" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -337,15 +391,12 @@
 Query=Dim_Date</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>
         <Node ToolID="79">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="858" y="1410" />
+            <Position x="846" y="1436" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -366,7 +417,7 @@ Query=Dim_Date</DefaultAnnotationText>
         </Node>
         <Node ToolID="80">
           <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="990" y="1422" />
+            <Position x="978" y="1448" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -392,7 +443,7 @@ Query=Dim_Date</DefaultAnnotationText>
         </Node>
         <Node ToolID="81">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1098" y="1422" />
+            <Position x="1086" y="1448" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -411,11 +462,43 @@ Query=Dim_Date</DefaultAnnotationText>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
         </Node>
+        <Node ToolID="107">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="522" y="1530" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>IsNotNull</Operator>
+                <Field>ARREST_DATE</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2022-04-12 14:15:06</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <StartDate>2022-04-12 14:15:06</StartDate>
+                  <EndDate>2022-04-12 14:15:06</EndDate>
+                  <Operand>
+                  </Operand>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>!IsNull([ARREST_DATE])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
       </ChildNodes>
     </Node>
     <Node ToolID="103">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="413" y="3305" width="637" height="279" />
+        <Position x="401" y="3331" width="685" height="279" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -433,7 +516,7 @@ Query=Dim_Date</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="55">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="438" y="3438" />
+            <Position x="426" y="3462" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -454,7 +537,7 @@ Query=Dim_Date</DefaultAnnotationText>
         </Node>
         <Node ToolID="56">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-            <Position x="534" y="3438" />
+            <Position x="618" y="3462" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -472,7 +555,7 @@ Query=Dim_Date</DefaultAnnotationText>
         </Node>
         <Node ToolID="57">
           <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-            <Position x="630" y="3438" />
+            <Position x="714" y="3462" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -492,7 +575,7 @@ Query=Dim_Date</DefaultAnnotationText>
         </Node>
         <Node ToolID="59">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="738" y="3438" />
+            <Position x="810" y="3462" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -514,7 +597,7 @@ Query=Dim_Date</DefaultAnnotationText>
         </Node>
         <Node ToolID="60">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="906" y="3438" />
+            <Position x="894" y="3464" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -546,7 +629,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="96">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="678" y="3354" />
+            <Position x="666" y="3380" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -567,7 +650,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="98">
           <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="858" y="3378" />
+            <Position x="906" y="3402" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -593,7 +676,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="99">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="966" y="3378" />
+            <Position x="1002" y="3402" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -612,11 +695,43 @@ Query=Dim_CatCD</DefaultAnnotationText>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
         </Node>
+        <Node ToolID="112">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="522" y="3462" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>IsNotNull</Operator>
+                <Field>JurisdictionCode</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2022-04-12 14:17:10</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <StartDate>2022-04-12 14:17:10</StartDate>
+                  <EndDate>2022-04-12 14:17:10</EndDate>
+                  <Operand>
+                  </Operand>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>!IsNull([JurisdictionCode])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
       </ChildNodes>
     </Node>
     <Node ToolID="102">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="809" y="2849" width="661" height="339" />
+        <Position x="797" y="2875" width="781" height="337" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -634,7 +749,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="49">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="834" y="2982" />
+            <Position x="822" y="3006" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -655,7 +770,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="50">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-            <Position x="930" y="2982" />
+            <Position x="1014" y="3006" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -673,7 +788,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="51">
           <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-            <Position x="1026" y="2982" />
+            <Position x="1110" y="3006" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -693,7 +808,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="52">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1122" y="2982" />
+            <Position x="1206" y="3006" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -712,7 +827,7 @@ ELSEIF [ArrestBoro_Type...</DefaultAnnotationText>
         </Node>
         <Node ToolID="53">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1206" y="2982" />
+            <Position x="1302" y="3006" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -735,7 +850,7 @@ ELSEIF [ArrestBoro_Type...</DefaultAnnotationText>
         </Node>
         <Node ToolID="54">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="1302" y="3006" />
+            <Position x="1398" y="3030" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -762,15 +877,12 @@ ELSEIF [ArrestBoro_Type...</DefaultAnnotationText>
 Query=Dim_CatCD</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>
         <Node ToolID="93">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1158" y="2898" />
+            <Position x="1146" y="2924" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -791,7 +903,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="94">
           <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="1290" y="2910" />
+            <Position x="1398" y="2934" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -817,7 +929,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="95">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1386" y="2910" />
+            <Position x="1494" y="2934" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -836,11 +948,43 @@ Query=Dim_CatCD</DefaultAnnotationText>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
         </Node>
+        <Node ToolID="111">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="918" y="3006" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>IsNotNull</Operator>
+                <Field>ArrestBoro_Type</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2022-04-12 14:16:51</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <StartDate>2022-04-12 14:16:51</StartDate>
+                  <EndDate>2022-04-12 14:16:51</EndDate>
+                  <Operand>
+                  </Operand>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>!IsNull([ArrestBoro_Type])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
       </ChildNodes>
     </Node>
     <Node ToolID="101">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="809" y="2441" width="553" height="291" />
+        <Position x="797" y="2467" width="685" height="289" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -858,7 +1002,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="44">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="834" y="2586" />
+            <Position x="822" y="2610" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -879,7 +1023,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="45">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-            <Position x="930" y="2586" />
+            <Position x="1014" y="2610" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -897,7 +1041,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="46">
           <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-            <Position x="1026" y="2586" />
+            <Position x="1110" y="2610" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -917,7 +1061,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="47">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1110" y="2586" />
+            <Position x="1206" y="2610" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -939,7 +1083,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="48">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="1194" y="2586" />
+            <Position x="1302" y="2610" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -965,15 +1109,12 @@ Query=Dim_CatCD</DefaultAnnotationText>
 Query=Dim_LawCode</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>
         <Node ToolID="90">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="954" y="2490" />
+            <Position x="942" y="2516" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -994,7 +1135,7 @@ Query=Dim_LawCode</DefaultAnnotationText>
         </Node>
         <Node ToolID="91">
           <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="1182" y="2514" />
+            <Position x="1302" y="2538" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1020,7 +1161,7 @@ Query=Dim_LawCode</DefaultAnnotationText>
         </Node>
         <Node ToolID="92">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1278" y="2514" />
+            <Position x="1398" y="2538" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1039,11 +1180,43 @@ Query=Dim_LawCode</DefaultAnnotationText>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
         </Node>
+        <Node ToolID="110">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="918" y="2610" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>IsNotNull</Operator>
+                <Field>LAW_CODE</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2022-04-12 14:16:41</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <StartDate>2022-04-12 14:16:41</StartDate>
+                  <EndDate>2022-04-12 14:16:41</EndDate>
+                  <Operand>
+                  </Operand>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>!IsNull([LAW_CODE])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
       </ChildNodes>
     </Node>
     <Node ToolID="100">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="569" y="2105" width="509" height="291" />
+        <Position x="557" y="2131" width="629" height="316" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1061,7 +1234,7 @@ Query=Dim_LawCode</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="39">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="594" y="2250" />
+            <Position x="582" y="2274" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1083,7 +1256,7 @@ Query=Dim_LawCode</DefaultAnnotationText>
         </Node>
         <Node ToolID="40">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-            <Position x="690" y="2250" />
+            <Position x="774" y="2274" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1102,7 +1275,7 @@ Query=Dim_LawCode</DefaultAnnotationText>
         </Node>
         <Node ToolID="41">
           <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-            <Position x="786" y="2250" />
+            <Position x="870" y="2274" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1122,7 +1295,7 @@ Query=Dim_LawCode</DefaultAnnotationText>
         </Node>
         <Node ToolID="42">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="870" y="2250" />
+            <Position x="966" y="2274" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1144,7 +1317,7 @@ Query=Dim_LawCode</DefaultAnnotationText>
         </Node>
         <Node ToolID="43">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="954" y="2250" />
+            <Position x="1062" y="2274" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1170,15 +1343,12 @@ Query=Dim_LawCode</DefaultAnnotationText>
 Query=Dim_KYCD</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>
         <Node ToolID="87">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="762" y="2154" />
+            <Position x="750" y="2180" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1199,7 +1369,7 @@ Query=Dim_KYCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="88">
           <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="846" y="2166" />
+            <Position x="966" y="2190" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1225,7 +1395,7 @@ Query=Dim_KYCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="89">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="954" y="2166" />
+            <Position x="1062" y="2190" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1244,11 +1414,32 @@ Query=Dim_KYCD</DefaultAnnotationText>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
         </Node>
+        <Node ToolID="109">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="678" y="2286" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[KY_CD]  != "NULL"
+AND
+[OFNS_DESC]  != "NULL"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[KY_CD]  != "NULL"
+AND
+[OFNS_DESC]  != "NULL"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
       </ChildNodes>
     </Node>
     <Node ToolID="86">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="485" y="1769" width="510" height="279" />
+        <Position x="473" y="1795" width="630" height="292" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1266,7 +1457,7 @@ Query=Dim_KYCD</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="31">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="510" y="1902" />
+            <Position x="498" y="1926" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1288,7 +1479,7 @@ Query=Dim_KYCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="32">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-            <Position x="606" y="1902" />
+            <Position x="690" y="1926" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1307,7 +1498,7 @@ Query=Dim_KYCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="33">
           <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-            <Position x="702" y="1902" />
+            <Position x="786" y="1926" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1327,7 +1518,7 @@ Query=Dim_KYCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="35">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="786" y="1902" />
+            <Position x="882" y="1926" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1350,7 +1541,7 @@ Query=Dim_KYCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="37">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="870" y="1902" />
+            <Position x="978" y="1926" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1377,15 +1568,12 @@ Query=Dim_KYCD</DefaultAnnotationText>
 Query=Dim_PDCD</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>
         <Node ToolID="83">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="630" y="1818" />
+            <Position x="618" y="1844" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1406,7 +1594,7 @@ Query=Dim_PDCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="84">
           <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="810" y="1842" />
+            <Position x="882" y="1866" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1432,7 +1620,7 @@ Query=Dim_PDCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="85">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="882" y="1842" />
+            <Position x="978" y="1866" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1451,11 +1639,32 @@ Query=Dim_PDCD</DefaultAnnotationText>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
         </Node>
+        <Node ToolID="108">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="594" y="1926" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[PD_CD]  != "NULL"
+AND
+[PD_DESC] != "NULL"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[PD_CD]  != "NULL"
+AND
+[PD_DESC] != "NULL"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
       </ChildNodes>
     </Node>
     <Node ToolID="78">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="569" y="905" width="649" height="324" />
+        <Position x="557" y="931" width="781" height="322" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1473,7 +1682,7 @@ Query=Dim_PDCD</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="15">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="594" y="1038" />
+            <Position x="582" y="1062" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1494,7 +1703,7 @@ Query=Dim_PDCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="16">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-            <Position x="690" y="1038" />
+            <Position x="774" y="1062" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1512,7 +1721,7 @@ Query=Dim_PDCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="17">
           <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-            <Position x="786" y="1038" />
+            <Position x="870" y="1062" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1532,7 +1741,7 @@ Query=Dim_PDCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="23">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="882" y="1038" />
+            <Position x="966" y="1062" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1551,7 +1760,7 @@ ELSEIF [LAW_CAT_CD]="M" THEN ...</DefaultAnnotationText>
         </Node>
         <Node ToolID="24">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="966" y="1038" />
+            <Position x="1062" y="1062" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1574,7 +1783,7 @@ ELSEIF [LAW_CAT_CD]="M" THEN ...</DefaultAnnotationText>
         </Node>
         <Node ToolID="36">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="1062" y="1038" />
+            <Position x="1158" y="1062" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1600,15 +1809,12 @@ ELSEIF [LAW_CAT_CD]="M" THEN ...</DefaultAnnotationText>
 Query=Dim_CatCD</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>
         <Node ToolID="73">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="810" y="954" />
+            <Position x="798" y="980" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1629,7 +1835,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="75">
           <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="1050" y="978" />
+            <Position x="1158" y="1002" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1655,7 +1861,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="76">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1134" y="978" />
+            <Position x="1254" y="1002" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1674,11 +1880,43 @@ Query=Dim_CatCD</DefaultAnnotationText>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
         </Node>
+        <Node ToolID="106">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="678" y="1062" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>IsNotNull</Operator>
+                <Field>LAW_CAT_CD</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2022-04-12 14:14:49</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <StartDate>2022-04-12 14:14:49</StartDate>
+                  <EndDate>2022-04-12 14:14:49</EndDate>
+                  <Operand>
+                  </Operand>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>!IsNull([LAW_CAT_CD])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
       </ChildNodes>
     </Node>
     <Node ToolID="77">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="1037" y="425" width="589" height="300" />
+        <Position x="1025" y="451" width="685" height="367" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1696,7 +1934,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="11">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1062" y="558" />
+            <Position x="1050" y="581" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1720,7 +1958,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="12">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-            <Position x="1158" y="558" />
+            <Position x="1242" y="582" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1741,7 +1979,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="13">
           <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-            <Position x="1254" y="558" />
+            <Position x="1338" y="582" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1761,7 +1999,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="14">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="1338" y="594" />
+            <Position x="1434" y="618" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1788,15 +2026,12 @@ Query=Dim_CatCD</DefaultAnnotationText>
 Query=Dim_Geo</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>
         <Node ToolID="68">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1146" y="474" />
+            <Position x="1134" y="500" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1820,7 +2055,7 @@ Query=Dim_Geo</DefaultAnnotationText>
         </Node>
         <Node ToolID="69">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1242" y="474" />
+            <Position x="1230" y="500" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1839,7 +2074,7 @@ Query=Dim_Geo</DefaultAnnotationText>
         </Node>
         <Node ToolID="70">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1362" y="522" />
+            <Position x="1434" y="546" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1858,7 +2093,7 @@ Query=Dim_Geo</DefaultAnnotationText>
         </Node>
         <Node ToolID="71">
           <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="1446" y="498" />
+            <Position x="1530" y="522" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1884,7 +2119,7 @@ Query=Dim_Geo</DefaultAnnotationText>
         </Node>
         <Node ToolID="72">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1542" y="498" />
+            <Position x="1626" y="522" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1903,11 +2138,40 @@ Query=Dim_Geo</DefaultAnnotationText>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
         </Node>
+        <Node ToolID="105">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1146" y="582" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[X_COORD_CD] != "NULL"
+AND
+[Y_COORD_CD] != "NULL"
+AND
+[Latitude] != "NULL"
+AND
+[Longitude] != "NULL"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[X_COORD_CD] != "NULL"
+AND
+[Y_COORD_CD] != "NULL"
+AND
+[Latitude] != "NULL"
+AND
+[...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
       </ChildNodes>
     </Node>
     <Node ToolID="67">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="893" y="28" width="589" height="351" />
+        <Position x="881" y="54" width="673" height="374" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1925,7 +2189,7 @@ Query=Dim_Geo</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="4">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="918" y="197" />
+            <Position x="906" y="222" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1948,7 +2212,7 @@ Query=Dim_Geo</DefaultAnnotationText>
         </Node>
         <Node ToolID="5">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-            <Position x="1002" y="198" />
+            <Position x="1074" y="236" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1968,7 +2232,7 @@ Query=Dim_Geo</DefaultAnnotationText>
         </Node>
         <Node ToolID="6">
           <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-            <Position x="1086" y="198" />
+            <Position x="1158" y="236" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1988,7 +2252,7 @@ Query=Dim_Geo</DefaultAnnotationText>
         </Node>
         <Node ToolID="10">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="1194" y="234" />
+            <Position x="1266" y="272" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2015,15 +2279,12 @@ Query=Dim_Geo</DefaultAnnotationText>
 Query=Dim_PerpetratorDetails</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>
         <Node ToolID="61">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="978" y="78" />
+            <Position x="966" y="104" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2046,7 +2307,7 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
         </Node>
         <Node ToolID="62">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1098" y="77" />
+            <Position x="1086" y="103" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2065,7 +2326,7 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
         </Node>
         <Node ToolID="64">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1206" y="138" />
+            <Position x="1278" y="176" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2084,7 +2345,7 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
         </Node>
         <Node ToolID="65">
           <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="1290" y="102" />
+            <Position x="1350" y="126" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2110,7 +2371,7 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
         </Node>
         <Node ToolID="66">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1398" y="102" />
+            <Position x="1470" y="114" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2128,6 +2389,31 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
             </Annotation>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="104">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="990" y="222" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[AGE_GROUP] != "NULL"
+AND
+[PERP_SEX] != "NULL"
+AND
+[PERP_RACE] != "NULL"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[AGE_GROUP] != "NULL"
+AND
+[PERP_SEX] != "NULL"
+AND
+[PERP_RACE] != "NULL"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
         </Node>
       </ChildNodes>
     </Node>
@@ -2210,8 +2496,52 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
       <Destination ToolID="96" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="114" Connection="Input" />
+    </Connection>
+    <Connection name="#4">
+      <Origin ToolID="114" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection name="#5">
+      <Origin ToolID="81" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection name="#10">
+      <Origin ToolID="99" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection name="#9">
+      <Origin ToolID="95" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection name="#8">
+      <Origin ToolID="92" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection name="#7">
+      <Origin ToolID="89" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection name="#6">
+      <Origin ToolID="85" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="76" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="72" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="66" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="19" Connection="Output" />
-      <Destination ToolID="20" Connection="Input" />
+      <Destination ToolID="107" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="20" Connection="Unique" />
@@ -2258,8 +2588,12 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
       <Destination ToolID="81" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="107" Connection="True" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="55" Connection="Output" />
-      <Destination ToolID="56" Connection="Input" />
+      <Destination ToolID="112" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="56" Connection="Unique" />
@@ -2286,8 +2620,12 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
       <Destination ToolID="99" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="112" Connection="True" />
+      <Destination ToolID="56" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="49" Connection="Output" />
-      <Destination ToolID="50" Connection="Input" />
+      <Destination ToolID="111" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="50" Connection="Unique" />
@@ -2318,8 +2656,12 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
       <Destination ToolID="95" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="111" Connection="True" />
+      <Destination ToolID="50" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="44" Connection="Output" />
-      <Destination ToolID="45" Connection="Input" />
+      <Destination ToolID="110" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="45" Connection="Unique" />
@@ -2346,8 +2688,12 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
       <Destination ToolID="92" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="110" Connection="True" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="39" Connection="Output" />
-      <Destination ToolID="40" Connection="Input" />
+      <Destination ToolID="109" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="40" Connection="Unique" />
@@ -2374,8 +2720,12 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
       <Destination ToolID="89" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="109" Connection="True" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="31" Connection="Output" />
-      <Destination ToolID="32" Connection="Input" />
+      <Destination ToolID="108" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="32" Connection="Unique" />
@@ -2402,8 +2752,12 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
       <Destination ToolID="85" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="108" Connection="True" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="15" Connection="Output" />
-      <Destination ToolID="16" Connection="Input" />
+      <Destination ToolID="106" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="16" Connection="Unique" />
@@ -2434,8 +2788,12 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
       <Destination ToolID="76" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="106" Connection="True" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="11" Connection="Output" />
-      <Destination ToolID="12" Connection="Input" />
+      <Destination ToolID="105" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="12" Connection="Unique" />
@@ -2466,8 +2824,12 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
       <Destination ToolID="72" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="105" Connection="True" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="4" Connection="Output" />
-      <Destination ToolID="5" Connection="Input" />
+      <Destination ToolID="104" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="5" Connection="Unique" />
@@ -2496,6 +2858,10 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
     <Connection>
       <Origin ToolID="65" Connection="Output" />
       <Destination ToolID="66" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="104" Connection="True" />
+      <Destination ToolID="5" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>

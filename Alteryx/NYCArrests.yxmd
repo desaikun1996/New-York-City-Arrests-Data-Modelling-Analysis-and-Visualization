@@ -1,9 +1,255 @@
 <?xml version="1.0"?>
 <AlteryxDocument yxmdVer="2021.3">
   <Nodes>
+    <Node ToolID="114">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2562" y="2070" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="ARREST_KEY" selected="True" />
+            <SelectField field="ARREST_PRECINCT" selected="True" />
+            <SelectField field="JURISDICTION_CODE" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="100">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2081" y="3449" width="629" height="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Dim_KYCD</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="39">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2106" y="3594" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="KY_CD" selected="True" />
+                <SelectField field="OFNS_DESC" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="40">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="2298" y="3594" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="KY_CD" />
+                <Field field="OFNS_DESC" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="41">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="2394" y="3594" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>KY_SK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="42">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2490" y="3594" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="KY_CD" selected="True" />
+                <SelectField field="OFNS_DESC" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="43">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="2586" y="3594" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Dim_KYCD</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Create</OutputOption>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:LAPTOP-B40PCB4S
+Query=Dim_KYCD</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="87">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2274" y="3498" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="KY_CD" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="88">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
+            <Position x="2490" y="3510" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldFind>KY_CD</FieldFind>
+              <FieldSearch>KY_CD</FieldSearch>
+              <ReplaceFoundField>OFNS_DESC</ReplaceFoundField>
+              <FindMode>FindWhole</FindMode>
+              <NoCase value="False" />
+              <MatchWholeWord value="False" />
+              <ReplaceMode>Append</ReplaceMode>
+              <ReplaceMultipleFound value="True" />
+              <ReplaceAppendFields>
+                <Field field="KY_SK" />
+              </ReplaceAppendFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
+        </Node>
+        <Node ToolID="89">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2586" y="3510" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="KY_SK" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="109">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2202" y="3606" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[KY_CD]  != "NULL"
+AND
+[OFNS_DESC]  != "NULL"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[KY_CD]  != "NULL"
+AND
+[OFNS_DESC]  != "NULL"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
+    </Node>
     <Node ToolID="1">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="54" y="78" />
+        <Position x="162" y="606" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -55,7 +301,7 @@
     </Node>
     <Node ToolID="3">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="186" y="78" />
+        <Position x="294" y="606" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -92,56 +338,161 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
     </Node>
-    <Node ToolID="113">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.JoinMultiple.JoinMultiple">
-        <Position x="2226" y="1038" />
+    <Node ToolID="126">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2081" y="1121" width="521" height="243" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <JoinByRecPos value="True" />
-          <OutputJoinOnly value="False" />
-          <SelectConfiguration>
-            <Configuration outputConnection="Output">
-              <OrderChanged value="True" />
+          <Caption>Dim_AgeGroup</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="117">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2106" y="1170" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
               <CommaDecimal value="False" />
               <SelectFields>
-                <SelectField field="Input_#4_ARREST_KEY" selected="True" />
-                <SelectField field="Input_#5_Date_Key" selected="True" />
-                <SelectField field="Input_#6_PD_SK" selected="True" />
-                <SelectField field="Input_#7_KY_SK" selected="True" />
-                <SelectField field="Input_#8_LawCode_SK" selected="True" />
-                <SelectField field="Input_#3_LawCat_SK" selected="True" />
-                <SelectField field="Input_#9_ArrestBoro_SK" selected="True" />
-                <SelectField field="Input_#10_JurisdictionCode_SK" selected="True" />
-                <SelectField field="Input_#1_Perpetrator_SK" selected="True" />
-                <SelectField field="Input_#2_Geo_SK" selected="True" />
-                <SelectField field="Input_#4_ARREST_PRECINCT" selected="True" />
+                <SelectField field="AGE_GROUP" selected="True" />
                 <SelectField field="*Unknown" selected="False" />
               </SelectFields>
             </Configuration>
-          </SelectConfiguration>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoinMultiple" />
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="118">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2202" y="1170" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>IsNotNull</Operator>
+                <Field>AGE_GROUP</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2022-04-13 18:05:40</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>
+                  </Operand>
+                  <StartDate>2022-04-13 18:05:40</StartDate>
+                  <EndDate>2022-04-13 18:05:40</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>!IsNull([AGE_GROUP])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="119">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="2310" y="1170" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="AGE_GROUP" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="120">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="2382" y="1170" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>AgeGroup_SK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="121">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="2478" y="1218" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Dim_AgeGroup</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Create</OutputOption>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:LAPTOP-B40PCB4S
+Query=Dim_AgeGroup</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
     </Node>
-    <Node ToolID="114">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1338" y="846" />
+    <Node ToolID="102">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2237" y="4301" width="781" height="339" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <OrderChanged value="False" />
-          <CommaDecimal value="False" />
-          <SelectFields>
-            <SelectField field="ARREST_KEY" selected="True" />
-            <SelectField field="ARREST_PRECINCT" selected="True" />
-            <SelectField field="*Unknown" selected="False" />
-          </SelectFields>
+          <Caption>Dim_ArrestBoro</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -149,30 +500,252 @@
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <ChildNodes>
+        <Node ToolID="49">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2262" y="4434" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="ARREST_BORO" selected="True" rename="ArrestBoro_Type" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="50">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="2454" y="4434" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="ArrestBoro_Type" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="51">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="2550" y="4434" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>ArrestBoro_SK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="52">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="2646" y="4434" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IF [ArrestBoro_Type]=&quot;B&quot; THEN &quot;Bronx&quot; &#xA;ELSEIF [ArrestBoro_Type]=&quot;S&quot; THEN &quot;Staten Island&quot; &#xA;ELSEIF [ArrestBoro_Type]=&quot;K&quot; THEN &quot;Brooklyn&quot; &#xA;ELSEIF [ArrestBoro_Type]=&quot;M&quot; THEN &quot;Manhattan&quot; &#xA;ELSEIF [ArrestBoro_Type]=&quot;Q&quot; THEN &quot;Queens&quot; &#xA;ELSE &quot;&quot; ENDIF" field="ArrestBoro_Desc" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>ArrestBoro_Desc = IF [ArrestBoro_Type]="B" THEN "Bronx" 
+ELSEIF [ArrestBoro_Type...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="53">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2742" y="4434" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="ArrestBoro_SK" selected="True" />
+                <SelectField field="ArrestBoro_Type" selected="True" />
+                <SelectField field="ArrestBoro_Desc" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="54">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="2838" y="4458" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Dim_CatCD</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Create</OutputOption>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:LAPTOP-B40PCB4S
+Query=Dim_CatCD</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="93">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2586" y="4350" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="ARREST_BORO" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="94">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
+            <Position x="2838" y="4362" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldFind>ARREST_BORO</FieldFind>
+              <FieldSearch>ArrestBoro_Type</FieldSearch>
+              <ReplaceFoundField>ArrestBoro_Desc</ReplaceFoundField>
+              <FindMode>FindWhole</FindMode>
+              <NoCase value="False" />
+              <MatchWholeWord value="False" />
+              <ReplaceMode>Append</ReplaceMode>
+              <ReplaceMultipleFound value="True" />
+              <ReplaceAppendFields>
+                <Field field="ArrestBoro_SK" />
+              </ReplaceAppendFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
+        </Node>
+        <Node ToolID="95">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2934" y="4362" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="ArrestBoro_SK" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="111">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2358" y="4434" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>IsNotNull</Operator>
+                <Field>ArrestBoro_Type</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2022-04-12 14:16:51</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <StartDate>2022-04-12 14:16:51</StartDate>
+                  <EndDate>2022-04-12 14:16:51</EndDate>
+                  <Operand>
+                  </Operand>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>!IsNull([ArrestBoro_Type])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
     </Node>
-    <Node ToolID="115">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="2298" y="1038" />
+    <Node ToolID="101">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2237" y="3893" width="685" height="291" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <OrderChanged value="False" />
-          <CommaDecimal value="False" />
-          <SelectFields>
-            <SelectField field="ARREST_KEY" selected="True" />
-            <SelectField field="Date_Key" selected="True" />
-            <SelectField field="PD_SK" selected="True" />
-            <SelectField field="KY_SK" selected="True" />
-            <SelectField field="LawCode_SK" selected="True" />
-            <SelectField field="LawCat_SK" selected="True" />
-            <SelectField field="ArrestBoro_SK" selected="True" />
-            <SelectField field="JurisdictionCode_SK" selected="True" />
-            <SelectField field="Perpetrator_SK" selected="True" />
-            <SelectField field="Geo_SK" selected="True" />
-            <SelectField field="ARREST_PRECINCT" selected="True" />
-            <SelectField field="*Unknown" selected="False" />
-          </SelectFields>
+          <Caption>Dim_LawCode</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -180,22 +753,231 @@
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+      <ChildNodes>
+        <Node ToolID="44">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2262" y="4038" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="LAW_CODE" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="45">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="2454" y="4038" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="LAW_CODE" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="46">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="2550" y="4038" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>LawCode_SK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="47">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2646" y="4038" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="LawCode_SK" selected="True" />
+                <SelectField field="LAW_CODE" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="48">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="2742" y="4038" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Dim_LawCode</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Create</OutputOption>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:LAPTOP-B40PCB4S
+Query=Dim_LawCode</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="90">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2382" y="3942" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="LAW_CODE" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="91">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
+            <Position x="2742" y="3966" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldFind>LAW_CODE</FieldFind>
+              <FieldSearch>LAW_CODE</FieldSearch>
+              <ReplaceFoundField>LAW_CODE</ReplaceFoundField>
+              <FindMode>FindWhole</FindMode>
+              <NoCase value="False" />
+              <MatchWholeWord value="False" />
+              <ReplaceMode>Append</ReplaceMode>
+              <ReplaceMultipleFound value="True" />
+              <ReplaceAppendFields>
+                <Field field="LawCode_SK" />
+              </ReplaceAppendFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
+        </Node>
+        <Node ToolID="92">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2838" y="3966" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="LawCode_SK" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="110">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2358" y="4038" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>IsNotNull</Operator>
+                <Field>LAW_CODE</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2022-04-12 14:16:41</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <StartDate>2022-04-12 14:16:41</StartDate>
+                  <EndDate>2022-04-12 14:16:41</EndDate>
+                  <Operand>
+                  </Operand>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>!IsNull([LAW_CODE])</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
     </Node>
-    <Node ToolID="116">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-        <Position x="2394" y="1038" />
+    <Node ToolID="86">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2045" y="3077" width="630" height="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <File FileFormat="19" MaxRecords="" />
-          <Passwords />
-          <FormatSpecificOptions>
-            <NoSpatialIndex>False</NoSpatialIndex>
-            <SaveSource>True</SaveSource>
-            <WriteCompatibleVersion>False</WriteCompatibleVersion>
-          </FormatSpecificOptions>
-          <MultiFile value="False" />
+          <Caption>Dim_PDCD</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -203,11 +985,217 @@
           <Left value="False" />
         </Annotation>
       </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+      <ChildNodes>
+        <Node ToolID="31">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2070" y="3210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="PD_CD" selected="True" />
+                <SelectField field="PD_DESC" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="32">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="2262" y="3210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="PD_CD" />
+                <Field field="PD_DESC" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="33">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="2358" y="3210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>PD_SK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="35">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2454" y="3210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="PD_SK" selected="True" />
+                <SelectField field="PD_CD" selected="True" />
+                <SelectField field="PD_DESC" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="37">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="2550" y="3210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Dim_PDCD</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Create</OutputOption>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:LAPTOP-B40PCB4S
+Query=Dim_PDCD</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="83">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2190" y="3126" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="PD_CD" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="84">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
+            <Position x="2454" y="3150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldFind>PD_CD</FieldFind>
+              <FieldSearch>PD_CD</FieldSearch>
+              <ReplaceFoundField>PD_DESC</ReplaceFoundField>
+              <FindMode>FindWhole</FindMode>
+              <NoCase value="False" />
+              <MatchWholeWord value="False" />
+              <ReplaceMode>Append</ReplaceMode>
+              <ReplaceMultipleFound value="True" />
+              <ReplaceAppendFields>
+                <Field field="PD_SK" />
+              </ReplaceAppendFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
+        </Node>
+        <Node ToolID="85">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2550" y="3150" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="PD_SK" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="108">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="2166" y="3210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Expression>[PD_CD]  != "NULL"
+AND
+[PD_DESC] != "NULL"</Expression>
+              <Mode>Custom</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[PD_CD]  != "NULL"
+AND
+[PD_DESC] != "NULL"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+      </ChildNodes>
     </Node>
     <Node ToolID="82">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="401" y="1387" width="1113" height="319" />
+        <Position x="1985" y="2657" width="1113" height="321" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -225,7 +1213,7 @@
       <ChildNodes>
         <Node ToolID="19">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="426" y="1530" />
+            <Position x="2010" y="2802" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -263,7 +1251,7 @@
         </Node>
         <Node ToolID="20">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-            <Position x="618" y="1530" />
+            <Position x="2202" y="2802" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -281,7 +1269,7 @@
         </Node>
         <Node ToolID="21">
           <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-            <Position x="714" y="1530" />
+            <Position x="2298" y="2802" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -301,7 +1289,7 @@
         </Node>
         <Node ToolID="25">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="906" y="1530" />
+            <Position x="2490" y="2802" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -320,7 +1308,7 @@
         </Node>
         <Node ToolID="26">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="810" y="1530" />
+            <Position x="2394" y="2802" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -339,7 +1327,7 @@
         </Node>
         <Node ToolID="27">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1002" y="1530" />
+            <Position x="2586" y="2802" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -358,7 +1346,7 @@
         </Node>
         <Node ToolID="28">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1098" y="1530" />
+            <Position x="2682" y="2802" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -377,7 +1365,7 @@
         </Node>
         <Node ToolID="29">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1194" y="1530" />
+            <Position x="2778" y="2802" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -395,7 +1383,7 @@
         </Node>
         <Node ToolID="30">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1290" y="1530" />
+            <Position x="2874" y="2802" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -421,7 +1409,7 @@
         </Node>
         <Node ToolID="38">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="1386" y="1530" />
+            <Position x="2970" y="2802" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -452,7 +1440,7 @@ Query=Dim_Date</DefaultAnnotationText>
         </Node>
         <Node ToolID="79">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="846" y="1436" />
+            <Position x="2430" y="2706" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -473,7 +1461,7 @@ Query=Dim_Date</DefaultAnnotationText>
         </Node>
         <Node ToolID="80">
           <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="978" y="1448" />
+            <Position x="2562" y="2718" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -499,7 +1487,7 @@ Query=Dim_Date</DefaultAnnotationText>
         </Node>
         <Node ToolID="81">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1086" y="1448" />
+            <Position x="2670" y="2718" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -520,7 +1508,7 @@ Query=Dim_Date</DefaultAnnotationText>
         </Node>
         <Node ToolID="107">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="522" y="1530" />
+            <Position x="2106" y="2802" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -552,1175 +1540,9 @@ Query=Dim_Date</DefaultAnnotationText>
         </Node>
       </ChildNodes>
     </Node>
-    <Node ToolID="103">
-      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="401" y="3331" width="685" height="279" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Caption>Dim_JurisdictionCode</Caption>
-          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-          <Disabled value="False" />
-          <Folded value="False" />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <ChildNodes>
-        <Node ToolID="55">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="426" y="3462" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="JURISDICTION_CODE" selected="True" rename="JurisdictionCode" type="Int64" size="8" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="56">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-            <Position x="618" y="3462" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <UniqueFields>
-                <Field field="JurisdictionCode" />
-              </UniqueFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
-        </Node>
-        <Node ToolID="57">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-            <Position x="714" y="3462" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <FieldName>JurisdictionCode_SK</FieldName>
-              <StartValue>1</StartValue>
-              <FieldType>Int32</FieldType>
-              <FieldSize>6</FieldSize>
-              <Position>0</Position>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
-        </Node>
-        <Node ToolID="59">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="810" y="3462" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="JurisdictionCode_SK" selected="True" />
-                <SelectField field="JurisdictionCode" selected="True" type="V_WString" size="21" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="60">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="894" y="3464" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Dim_CatCD</File>
-              <Passwords />
-              <CachedCosmeticName />
-              <FormatSpecificOptions>
-                <TransactionMessages>False</TransactionMessages>
-                <Geometry>True</Geometry>
-                <Projection />
-                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
-                <SpatialObjSize>8000</SpatialObjSize>
-                <OutputOption>Create</OutputOption>
-                <PostSQL />
-                <TransactionSize>10000</TransactionSize>
-                <TableStyle>Quoted</TableStyle>
-                <PreSQL />
-              </FormatSpecificOptions>
-              <MultiFile value="False" />
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText>aka:LAPTOP-B40PCB4S
-Query=Dim_CatCD</DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
-        </Node>
-        <Node ToolID="96">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="666" y="3380" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="JURISDICTION_CODE" selected="True" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="98">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="906" y="3402" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <FieldFind>JURISDICTION_CODE</FieldFind>
-              <FieldSearch>JurisdictionCode</FieldSearch>
-              <ReplaceFoundField>JurisdictionCode</ReplaceFoundField>
-              <FindMode>FindWhole</FindMode>
-              <NoCase value="False" />
-              <MatchWholeWord value="False" />
-              <ReplaceMode>Append</ReplaceMode>
-              <ReplaceMultipleFound value="True" />
-              <ReplaceAppendFields>
-                <Field field="JurisdictionCode_SK" />
-              </ReplaceAppendFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
-        </Node>
-        <Node ToolID="99">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1002" y="3402" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="JurisdictionCode_SK" selected="True" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="112">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="522" y="3462" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <Mode>Simple</Mode>
-              <Simple>
-                <Operator>IsNotNull</Operator>
-                <Field>JurisdictionCode</Field>
-                <Operands>
-                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
-                  <DateType>fixed</DateType>
-                  <PeriodDate>2022-04-12 14:17:10</PeriodDate>
-                  <PeriodType>
-                  </PeriodType>
-                  <PeriodCount>0</PeriodCount>
-                  <StartDate>2022-04-12 14:17:10</StartDate>
-                  <EndDate>2022-04-12 14:17:10</EndDate>
-                  <Operand>
-                  </Operand>
-                </Operands>
-              </Simple>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText>!IsNull([JurisdictionCode])</DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
-        </Node>
-      </ChildNodes>
-    </Node>
-    <Node ToolID="102">
-      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="797" y="2875" width="781" height="337" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Caption>Dim_ArrestBoro</Caption>
-          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-          <Disabled value="False" />
-          <Folded value="False" />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <ChildNodes>
-        <Node ToolID="49">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="822" y="3006" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="ARREST_BORO" selected="True" rename="ArrestBoro_Type" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="50">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-            <Position x="1014" y="3006" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <UniqueFields>
-                <Field field="ArrestBoro_Type" />
-              </UniqueFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
-        </Node>
-        <Node ToolID="51">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-            <Position x="1110" y="3006" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <FieldName>ArrestBoro_SK</FieldName>
-              <StartValue>1</StartValue>
-              <FieldType>Int32</FieldType>
-              <FieldSize>6</FieldSize>
-              <Position>0</Position>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
-        </Node>
-        <Node ToolID="52">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1206" y="3006" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <FormulaFields>
-                <FormulaField expression="IF [ArrestBoro_Type]=&quot;B&quot; THEN &quot;Bronx&quot; &#xA;ELSEIF [ArrestBoro_Type]=&quot;S&quot; THEN &quot;Staten Island&quot; &#xA;ELSEIF [ArrestBoro_Type]=&quot;K&quot; THEN &quot;Brooklyn&quot; &#xA;ELSEIF [ArrestBoro_Type]=&quot;M&quot; THEN &quot;Manhattan&quot; &#xA;ELSEIF [ArrestBoro_Type]=&quot;Q&quot; THEN &quot;Queens&quot; &#xA;ELSE &quot;&quot; ENDIF" field="ArrestBoro_Desc" size="1073741823" type="V_WString" />
-              </FormulaFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText>ArrestBoro_Desc = IF [ArrestBoro_Type]="B" THEN "Bronx" 
-ELSEIF [ArrestBoro_Type...</DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-        </Node>
-        <Node ToolID="53">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1302" y="3006" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="ArrestBoro_SK" selected="True" />
-                <SelectField field="ArrestBoro_Type" selected="True" />
-                <SelectField field="ArrestBoro_Desc" selected="True" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="54">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="1398" y="3030" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Dim_CatCD</File>
-              <Passwords />
-              <CachedCosmeticName />
-              <FormatSpecificOptions>
-                <TransactionMessages>False</TransactionMessages>
-                <Geometry>True</Geometry>
-                <Projection />
-                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
-                <SpatialObjSize>8000</SpatialObjSize>
-                <OutputOption>Create</OutputOption>
-                <PostSQL />
-                <TransactionSize>10000</TransactionSize>
-                <TableStyle>Quoted</TableStyle>
-                <PreSQL />
-              </FormatSpecificOptions>
-              <MultiFile value="False" />
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText>aka:LAPTOP-B40PCB4S
-Query=Dim_CatCD</DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
-        </Node>
-        <Node ToolID="93">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1146" y="2924" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="ARREST_BORO" selected="True" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="94">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="1398" y="2934" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <FieldFind>ARREST_BORO</FieldFind>
-              <FieldSearch>ArrestBoro_Type</FieldSearch>
-              <ReplaceFoundField>ArrestBoro_Desc</ReplaceFoundField>
-              <FindMode>FindWhole</FindMode>
-              <NoCase value="False" />
-              <MatchWholeWord value="False" />
-              <ReplaceMode>Append</ReplaceMode>
-              <ReplaceMultipleFound value="True" />
-              <ReplaceAppendFields>
-                <Field field="ArrestBoro_SK" />
-              </ReplaceAppendFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
-        </Node>
-        <Node ToolID="95">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1494" y="2934" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="ArrestBoro_SK" selected="True" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="111">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="918" y="3006" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <Mode>Simple</Mode>
-              <Simple>
-                <Operator>IsNotNull</Operator>
-                <Field>ArrestBoro_Type</Field>
-                <Operands>
-                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
-                  <DateType>fixed</DateType>
-                  <PeriodDate>2022-04-12 14:16:51</PeriodDate>
-                  <PeriodType>
-                  </PeriodType>
-                  <PeriodCount>0</PeriodCount>
-                  <StartDate>2022-04-12 14:16:51</StartDate>
-                  <EndDate>2022-04-12 14:16:51</EndDate>
-                  <Operand>
-                  </Operand>
-                </Operands>
-              </Simple>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText>!IsNull([ArrestBoro_Type])</DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
-        </Node>
-      </ChildNodes>
-    </Node>
-    <Node ToolID="101">
-      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="797" y="2467" width="685" height="289" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Caption>Dim_LawCode</Caption>
-          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-          <Disabled value="False" />
-          <Folded value="False" />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <ChildNodes>
-        <Node ToolID="44">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="822" y="2610" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="LAW_CODE" selected="True" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="45">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-            <Position x="1014" y="2610" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <UniqueFields>
-                <Field field="LAW_CODE" />
-              </UniqueFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
-        </Node>
-        <Node ToolID="46">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-            <Position x="1110" y="2610" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <FieldName>LawCode_SK</FieldName>
-              <StartValue>1</StartValue>
-              <FieldType>Int32</FieldType>
-              <FieldSize>6</FieldSize>
-              <Position>0</Position>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
-        </Node>
-        <Node ToolID="47">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1206" y="2610" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="LawCode_SK" selected="True" />
-                <SelectField field="LAW_CODE" selected="True" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="48">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="1302" y="2610" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Dim_LawCode</File>
-              <Passwords />
-              <FormatSpecificOptions>
-                <TransactionMessages>False</TransactionMessages>
-                <Geometry>True</Geometry>
-                <Projection />
-                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
-                <SpatialObjSize>8000</SpatialObjSize>
-                <OutputOption>Create</OutputOption>
-                <PostSQL />
-                <TransactionSize>10000</TransactionSize>
-                <TableStyle>Quoted</TableStyle>
-                <PreSQL />
-              </FormatSpecificOptions>
-              <MultiFile value="False" />
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText>aka:LAPTOP-B40PCB4S
-Query=Dim_LawCode</DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
-        </Node>
-        <Node ToolID="90">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="942" y="2516" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="LAW_CODE" selected="True" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="91">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="1302" y="2538" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <FieldFind>LAW_CODE</FieldFind>
-              <FieldSearch>LAW_CODE</FieldSearch>
-              <ReplaceFoundField>LAW_CODE</ReplaceFoundField>
-              <FindMode>FindWhole</FindMode>
-              <NoCase value="False" />
-              <MatchWholeWord value="False" />
-              <ReplaceMode>Append</ReplaceMode>
-              <ReplaceMultipleFound value="True" />
-              <ReplaceAppendFields>
-                <Field field="LawCode_SK" />
-              </ReplaceAppendFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
-        </Node>
-        <Node ToolID="92">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1398" y="2538" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="LawCode_SK" selected="True" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="110">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="918" y="2610" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <Mode>Simple</Mode>
-              <Simple>
-                <Operator>IsNotNull</Operator>
-                <Field>LAW_CODE</Field>
-                <Operands>
-                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
-                  <DateType>fixed</DateType>
-                  <PeriodDate>2022-04-12 14:16:41</PeriodDate>
-                  <PeriodType>
-                  </PeriodType>
-                  <PeriodCount>0</PeriodCount>
-                  <StartDate>2022-04-12 14:16:41</StartDate>
-                  <EndDate>2022-04-12 14:16:41</EndDate>
-                  <Operand>
-                  </Operand>
-                </Operands>
-              </Simple>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText>!IsNull([LAW_CODE])</DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
-        </Node>
-      </ChildNodes>
-    </Node>
-    <Node ToolID="100">
-      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="557" y="2131" width="629" height="316" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Caption>Dim_KYCD</Caption>
-          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-          <Disabled value="False" />
-          <Folded value="False" />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <ChildNodes>
-        <Node ToolID="39">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="582" y="2274" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="KY_CD" selected="True" />
-                <SelectField field="OFNS_DESC" selected="True" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="40">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-            <Position x="774" y="2274" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <UniqueFields>
-                <Field field="KY_CD" />
-                <Field field="OFNS_DESC" />
-              </UniqueFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
-        </Node>
-        <Node ToolID="41">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-            <Position x="870" y="2274" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <FieldName>KY_SK</FieldName>
-              <StartValue>1</StartValue>
-              <FieldType>Int32</FieldType>
-              <FieldSize>6</FieldSize>
-              <Position>0</Position>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
-        </Node>
-        <Node ToolID="42">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="966" y="2274" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="KY_CD" selected="True" />
-                <SelectField field="OFNS_DESC" selected="True" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="43">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="1062" y="2274" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Dim_KYCD</File>
-              <Passwords />
-              <FormatSpecificOptions>
-                <TransactionMessages>False</TransactionMessages>
-                <Geometry>True</Geometry>
-                <Projection />
-                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
-                <SpatialObjSize>8000</SpatialObjSize>
-                <OutputOption>Create</OutputOption>
-                <PostSQL />
-                <TransactionSize>10000</TransactionSize>
-                <TableStyle>Quoted</TableStyle>
-                <PreSQL />
-              </FormatSpecificOptions>
-              <MultiFile value="False" />
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText>aka:LAPTOP-B40PCB4S
-Query=Dim_KYCD</DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
-        </Node>
-        <Node ToolID="87">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="750" y="2180" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="KY_CD" selected="True" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="88">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="966" y="2190" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <FieldFind>KY_CD</FieldFind>
-              <FieldSearch>KY_CD</FieldSearch>
-              <ReplaceFoundField>OFNS_DESC</ReplaceFoundField>
-              <FindMode>FindWhole</FindMode>
-              <NoCase value="False" />
-              <MatchWholeWord value="False" />
-              <ReplaceMode>Append</ReplaceMode>
-              <ReplaceMultipleFound value="True" />
-              <ReplaceAppendFields>
-                <Field field="KY_SK" />
-              </ReplaceAppendFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
-        </Node>
-        <Node ToolID="89">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1062" y="2190" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="KY_SK" selected="True" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="109">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="678" y="2286" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <Expression>[KY_CD]  != "NULL"
-AND
-[OFNS_DESC]  != "NULL"</Expression>
-              <Mode>Custom</Mode>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText>[KY_CD]  != "NULL"
-AND
-[OFNS_DESC]  != "NULL"</DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
-        </Node>
-      </ChildNodes>
-    </Node>
-    <Node ToolID="86">
-      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="473" y="1795" width="630" height="292" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Caption>Dim_PDCD</Caption>
-          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-          <Disabled value="False" />
-          <Folded value="False" />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <ChildNodes>
-        <Node ToolID="31">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="498" y="1926" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="PD_CD" selected="True" />
-                <SelectField field="PD_DESC" selected="True" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="32">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-            <Position x="690" y="1926" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <UniqueFields>
-                <Field field="PD_CD" />
-                <Field field="PD_DESC" />
-              </UniqueFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
-        </Node>
-        <Node ToolID="33">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-            <Position x="786" y="1926" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <FieldName>PD_SK</FieldName>
-              <StartValue>1</StartValue>
-              <FieldType>Int32</FieldType>
-              <FieldSize>6</FieldSize>
-              <Position>0</Position>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
-        </Node>
-        <Node ToolID="35">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="882" y="1926" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="PD_SK" selected="True" />
-                <SelectField field="PD_CD" selected="True" />
-                <SelectField field="PD_DESC" selected="True" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="37">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="978" y="1926" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Dim_PDCD</File>
-              <Passwords />
-              <CachedCosmeticName />
-              <FormatSpecificOptions>
-                <TransactionMessages>False</TransactionMessages>
-                <Geometry>True</Geometry>
-                <Projection />
-                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
-                <SpatialObjSize>8000</SpatialObjSize>
-                <OutputOption>Create</OutputOption>
-                <PostSQL />
-                <TransactionSize>10000</TransactionSize>
-                <TableStyle>Quoted</TableStyle>
-                <PreSQL />
-              </FormatSpecificOptions>
-              <MultiFile value="False" />
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText>aka:LAPTOP-B40PCB4S
-Query=Dim_PDCD</DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
-        </Node>
-        <Node ToolID="83">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="618" y="1844" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="PD_CD" selected="True" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="84">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="882" y="1866" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <FieldFind>PD_CD</FieldFind>
-              <FieldSearch>PD_CD</FieldSearch>
-              <ReplaceFoundField>PD_DESC</ReplaceFoundField>
-              <FindMode>FindWhole</FindMode>
-              <NoCase value="False" />
-              <MatchWholeWord value="False" />
-              <ReplaceMode>Append</ReplaceMode>
-              <ReplaceMultipleFound value="True" />
-              <ReplaceAppendFields>
-                <Field field="PD_SK" />
-              </ReplaceAppendFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
-        </Node>
-        <Node ToolID="85">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="978" y="1866" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="PD_SK" selected="True" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
-        <Node ToolID="108">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="594" y="1926" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <Expression>[PD_CD]  != "NULL"
-AND
-[PD_DESC] != "NULL"</Expression>
-              <Mode>Custom</Mode>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText>[PD_CD]  != "NULL"
-AND
-[PD_DESC] != "NULL"</DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
-        </Node>
-      </ChildNodes>
-    </Node>
     <Node ToolID="78">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="557" y="931" width="781" height="322" />
+        <Position x="2153" y="2213" width="781" height="324" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1738,7 +1560,7 @@ AND
       <ChildNodes>
         <Node ToolID="15">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="582" y="1062" />
+            <Position x="2178" y="2346" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1759,7 +1581,7 @@ AND
         </Node>
         <Node ToolID="16">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-            <Position x="774" y="1062" />
+            <Position x="2370" y="2346" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1777,7 +1599,7 @@ AND
         </Node>
         <Node ToolID="17">
           <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-            <Position x="870" y="1062" />
+            <Position x="2466" y="2346" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1797,7 +1619,7 @@ AND
         </Node>
         <Node ToolID="23">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="966" y="1062" />
+            <Position x="2562" y="2346" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1816,7 +1638,7 @@ ELSEIF [LAW_CAT_CD]="M" THEN ...</DefaultAnnotationText>
         </Node>
         <Node ToolID="24">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1062" y="1062" />
+            <Position x="2658" y="2346" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1839,7 +1661,7 @@ ELSEIF [LAW_CAT_CD]="M" THEN ...</DefaultAnnotationText>
         </Node>
         <Node ToolID="36">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="1158" y="1062" />
+            <Position x="2754" y="2346" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1870,7 +1692,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="73">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="798" y="980" />
+            <Position x="2394" y="2262" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1891,7 +1713,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="75">
           <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="1158" y="1002" />
+            <Position x="2754" y="2286" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1917,7 +1739,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="76">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1254" y="1002" />
+            <Position x="2850" y="2286" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1938,7 +1760,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="106">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="678" y="1062" />
+            <Position x="2274" y="2346" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1972,7 +1794,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
     </Node>
     <Node ToolID="77">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="1025" y="451" width="685" height="367" />
+        <Position x="2237" y="1553" width="685" height="369" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1990,7 +1812,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="11">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1050" y="581" />
+            <Position x="2262" y="1686" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2014,7 +1836,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="12">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-            <Position x="1242" y="582" />
+            <Position x="2454" y="1686" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2035,7 +1857,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="13">
           <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-            <Position x="1338" y="582" />
+            <Position x="2550" y="1686" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2055,7 +1877,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
         </Node>
         <Node ToolID="14">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="1434" y="618" />
+            <Position x="2646" y="1722" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2087,7 +1909,7 @@ Query=Dim_Geo</DefaultAnnotationText>
         </Node>
         <Node ToolID="68">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1134" y="500" />
+            <Position x="2346" y="1602" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2111,7 +1933,7 @@ Query=Dim_Geo</DefaultAnnotationText>
         </Node>
         <Node ToolID="69">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1230" y="500" />
+            <Position x="2442" y="1602" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2130,7 +1952,7 @@ Query=Dim_Geo</DefaultAnnotationText>
         </Node>
         <Node ToolID="70">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1434" y="546" />
+            <Position x="2646" y="1650" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2149,7 +1971,7 @@ Query=Dim_Geo</DefaultAnnotationText>
         </Node>
         <Node ToolID="71">
           <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="1530" y="522" />
+            <Position x="2742" y="1626" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2175,7 +1997,7 @@ Query=Dim_Geo</DefaultAnnotationText>
         </Node>
         <Node ToolID="72">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1626" y="522" />
+            <Position x="2838" y="1626" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2196,7 +2018,7 @@ Query=Dim_Geo</DefaultAnnotationText>
         </Node>
         <Node ToolID="105">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="1146" y="582" />
+            <Position x="2358" y="1686" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2225,9 +2047,132 @@ AND
         </Node>
       </ChildNodes>
     </Node>
+    <Node ToolID="127">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="4337" y="2465" width="324" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Fact_Arrest</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="113">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.JoinMultiple.JoinMultiple">
+            <Position x="4362" y="2514" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <JoinByRecPos value="True" />
+              <OutputJoinOnly value="False" />
+              <SelectConfiguration>
+                <Configuration outputConnection="Output">
+                  <OrderChanged value="True" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Input_#4_ARREST_KEY" selected="True" />
+                    <SelectField field="Input_#5_Date_Key" selected="True" />
+                    <SelectField field="Input_#6_PD_SK" selected="True" />
+                    <SelectField field="Input_#7_KY_SK" selected="True" />
+                    <SelectField field="Input_#8_LawCode_SK" selected="True" />
+                    <SelectField field="Input_#3_LawCat_SK" selected="True" />
+                    <SelectField field="Input_#9_ArrestBoro_SK" selected="True" />
+                    <SelectField field="Input_#10_JurisdictionCode_SK" selected="True" />
+                    <SelectField field="Input_#1_Perpetrator_SK" selected="True" />
+                    <SelectField field="Input_#2_Geo_SK" selected="True" />
+                    <SelectField field="Input_#4_ARREST_PRECINCT" selected="True" />
+                    <SelectField field="Input_#4_JURISDICTION_CODE" selected="True" />
+                    <SelectField field="*Unknown" selected="False" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoinMultiple" />
+        </Node>
+        <Node ToolID="115">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="4434" y="2514" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="ARREST_KEY" selected="True" />
+                <SelectField field="Date_Key" selected="True" />
+                <SelectField field="PD_SK" selected="True" />
+                <SelectField field="KY_SK" selected="True" />
+                <SelectField field="LawCode_SK" selected="True" />
+                <SelectField field="LawCat_SK" selected="True" />
+                <SelectField field="ArrestBoro_SK" selected="True" />
+                <SelectField field="Perpetrator_SK" selected="True" />
+                <SelectField field="Geo_SK" selected="True" />
+                <SelectField field="ARREST_PRECINCT" selected="True" />
+                <SelectField field="JURISDICTION_CODE" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="116">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="4530" y="2514" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Fact_Arrest</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Create</OutputOption>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:LAPTOP-B40PCB4S
+Query=Fact_Arrest</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
     <Node ToolID="67">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="881" y="54" width="673" height="374" />
+        <Position x="2249" y="605" width="937" height="435" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -2245,7 +2190,7 @@ AND
       <ChildNodes>
         <Node ToolID="4">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="906" y="222" />
+            <Position x="2274" y="774" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2268,7 +2213,7 @@ AND
         </Node>
         <Node ToolID="5">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-            <Position x="1074" y="236" />
+            <Position x="2442" y="786" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2288,7 +2233,7 @@ AND
         </Node>
         <Node ToolID="6">
           <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-            <Position x="1158" y="236" />
+            <Position x="2526" y="786" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2306,41 +2251,9 @@ AND
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
         </Node>
-        <Node ToolID="10">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="1266" y="272" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Dim_PerpetratorDetails</File>
-              <Passwords />
-              <CachedCosmeticName />
-              <FormatSpecificOptions>
-                <TransactionMessages>False</TransactionMessages>
-                <Geometry>True</Geometry>
-                <Projection />
-                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
-                <SpatialObjSize>8000</SpatialObjSize>
-                <OutputOption>Create</OutputOption>
-                <PostSQL />
-                <TransactionSize>10000</TransactionSize>
-                <TableStyle>Quoted</TableStyle>
-                <PreSQL />
-              </FormatSpecificOptions>
-              <MultiFile value="False" />
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText>aka:LAPTOP-B40PCB4S
-Query=Dim_PerpetratorDetails</DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
-        </Node>
         <Node ToolID="61">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="966" y="104" />
+            <Position x="2334" y="654" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2363,7 +2276,7 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
         </Node>
         <Node ToolID="62">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1086" y="103" />
+            <Position x="2454" y="654" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2382,7 +2295,7 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
         </Node>
         <Node ToolID="64">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1278" y="176" />
+            <Position x="2910" y="726" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2401,7 +2314,7 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
         </Node>
         <Node ToolID="65">
           <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="1350" y="126" />
+            <Position x="2982" y="678" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2427,7 +2340,7 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
         </Node>
         <Node ToolID="66">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1470" y="114" />
+            <Position x="3102" y="666" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2448,7 +2361,7 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
         </Node>
         <Node ToolID="104">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="990" y="222" />
+            <Position x="2358" y="774" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2471,10 +2384,182 @@ AND
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
         </Node>
+        <Node ToolID="122">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2610" y="858" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="123">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
+            <Position x="2706" y="894" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldFind>AGE_GROUP</FieldFind>
+              <FieldSearch>AGE_GROUP</FieldSearch>
+              <ReplaceFoundField>AGE_GROUP</ReplaceFoundField>
+              <FindMode>FindWhole</FindMode>
+              <NoCase value="False" />
+              <MatchWholeWord value="False" />
+              <ReplaceMode>Append</ReplaceMode>
+              <ReplaceMultipleFound value="True" />
+              <ReplaceAppendFields>
+                <Field field="AgeGroup_SK" />
+              </ReplaceAppendFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
+        </Node>
+        <Node ToolID="124">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="2802" y="894" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Perpetrator_SK" selected="True" />
+                <SelectField field="PERP_SEX" selected="True" />
+                <SelectField field="PERP_RACE" selected="True" />
+                <SelectField field="AgeGroup_SK" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="125">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="2910" y="894" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Dim_PerpetratorDetails</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Create</OutputOption>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:LAPTOP-B40PCB4S
+Query=Dim_PerpetratorDetails</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
       </ChildNodes>
     </Node>
   </Nodes>
   <Connections>
+    <Connection name="#4">
+      <Origin ToolID="114" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection name="#7">
+      <Origin ToolID="89" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection name="#9">
+      <Origin ToolID="95" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection name="#8">
+      <Origin ToolID="92" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection name="#6">
+      <Origin ToolID="85" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection name="#5">
+      <Origin ToolID="81" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="76" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="72" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="66" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="39" Connection="Output" />
+      <Destination ToolID="109" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="40" Connection="Unique" />
+      <Destination ToolID="41" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="88" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="87" Connection="Output" />
+      <Destination ToolID="88" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="88" Connection="Output" />
+      <Destination ToolID="89" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="109" Connection="True" />
+      <Destination ToolID="40" Connection="Input" />
+    </Connection>
     <Connection>
       <Origin ToolID="1" Connection="Output" />
       <Destination ToolID="3" Connection="Input" />
@@ -2513,10 +2598,6 @@ AND
     </Connection>
     <Connection>
       <Origin ToolID="3" Connection="Output" />
-      <Destination ToolID="55" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="3" Connection="Output" />
       <Destination ToolID="61" Connection="Input" />
     </Connection>
     <Connection>
@@ -2549,143 +2630,35 @@ AND
     </Connection>
     <Connection>
       <Origin ToolID="3" Connection="Output" />
-      <Destination ToolID="96" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="3" Connection="Output" />
       <Destination ToolID="114" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="113" Connection="Output" />
-      <Destination ToolID="115" Connection="Input" />
-    </Connection>
-    <Connection name="#4">
-      <Origin ToolID="114" Connection="Output" />
-      <Destination ToolID="113" Connection="Input" />
-    </Connection>
-    <Connection name="#5">
-      <Origin ToolID="81" Connection="Output" />
-      <Destination ToolID="113" Connection="Input" />
-    </Connection>
-    <Connection name="#10">
-      <Origin ToolID="99" Connection="Output" />
-      <Destination ToolID="113" Connection="Input" />
-    </Connection>
-    <Connection name="#9">
-      <Origin ToolID="95" Connection="Output" />
-      <Destination ToolID="113" Connection="Input" />
-    </Connection>
-    <Connection name="#8">
-      <Origin ToolID="92" Connection="Output" />
-      <Destination ToolID="113" Connection="Input" />
-    </Connection>
-    <Connection name="#7">
-      <Origin ToolID="89" Connection="Output" />
-      <Destination ToolID="113" Connection="Input" />
-    </Connection>
-    <Connection name="#6">
-      <Origin ToolID="85" Connection="Output" />
-      <Destination ToolID="113" Connection="Input" />
-    </Connection>
-    <Connection name="#3">
-      <Origin ToolID="76" Connection="Output" />
-      <Destination ToolID="113" Connection="Input" />
-    </Connection>
-    <Connection name="#2">
-      <Origin ToolID="72" Connection="Output" />
-      <Destination ToolID="113" Connection="Input" />
-    </Connection>
-    <Connection name="#1">
-      <Origin ToolID="66" Connection="Output" />
-      <Destination ToolID="113" Connection="Input" />
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="117" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="115" Connection="Output" />
-      <Destination ToolID="116" Connection="Input" />
+      <Origin ToolID="117" Connection="Output" />
+      <Destination ToolID="118" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="19" Connection="Output" />
-      <Destination ToolID="107" Connection="Input" />
+      <Origin ToolID="118" Connection="True" />
+      <Destination ToolID="119" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="20" Connection="Unique" />
-      <Destination ToolID="21" Connection="Input" />
+      <Origin ToolID="119" Connection="Unique" />
+      <Destination ToolID="120" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="21" Connection="Output" />
-      <Destination ToolID="26" Connection="Input" />
+      <Origin ToolID="120" Connection="Output" />
+      <Destination ToolID="121" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="21" Connection="Output" />
-      <Destination ToolID="80" Connection="Source" />
+      <Origin ToolID="120" Connection="Output" />
+      <Destination ToolID="123" Connection="Source" />
     </Connection>
     <Connection>
-      <Origin ToolID="79" Connection="Output" />
-      <Destination ToolID="80" Connection="Targets" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="25" Connection="Output" />
-      <Destination ToolID="27" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="26" Connection="Output" />
-      <Destination ToolID="25" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="27" Connection="Output" />
-      <Destination ToolID="28" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="28" Connection="Output" />
-      <Destination ToolID="29" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="29" Connection="Output" />
-      <Destination ToolID="30" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="30" Connection="Output" />
-      <Destination ToolID="38" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="80" Connection="Output" />
-      <Destination ToolID="81" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="107" Connection="True" />
-      <Destination ToolID="20" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="55" Connection="Output" />
-      <Destination ToolID="112" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="56" Connection="Unique" />
-      <Destination ToolID="57" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="57" Connection="Output" />
-      <Destination ToolID="59" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="59" Connection="Output" />
-      <Destination ToolID="60" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="59" Connection="Output" />
-      <Destination ToolID="98" Connection="Source" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="96" Connection="Output" />
-      <Destination ToolID="98" Connection="Targets" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="98" Connection="Output" />
-      <Destination ToolID="99" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="112" Connection="True" />
-      <Destination ToolID="56" Connection="Input" />
+      <Origin ToolID="122" Connection="Output" />
+      <Destination ToolID="123" Connection="Targets" />
     </Connection>
     <Connection>
       <Origin ToolID="49" Connection="Output" />
@@ -2756,38 +2729,6 @@ AND
       <Destination ToolID="45" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="39" Connection="Output" />
-      <Destination ToolID="109" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="40" Connection="Unique" />
-      <Destination ToolID="41" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="41" Connection="Output" />
-      <Destination ToolID="42" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="41" Connection="Output" />
-      <Destination ToolID="88" Connection="Source" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="87" Connection="Output" />
-      <Destination ToolID="88" Connection="Targets" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="42" Connection="Output" />
-      <Destination ToolID="43" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="88" Connection="Output" />
-      <Destination ToolID="89" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="109" Connection="True" />
-      <Destination ToolID="40" Connection="Input" />
-    </Connection>
-    <Connection>
       <Origin ToolID="31" Connection="Output" />
       <Destination ToolID="108" Connection="Input" />
     </Connection>
@@ -2818,6 +2759,58 @@ AND
     <Connection>
       <Origin ToolID="108" Connection="True" />
       <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="107" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Unique" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="80" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="79" Connection="Output" />
+      <Destination ToolID="80" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="80" Connection="Output" />
+      <Destination ToolID="81" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="107" Connection="True" />
+      <Destination ToolID="20" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="15" Connection="Output" />
@@ -2892,6 +2885,14 @@ AND
       <Destination ToolID="12" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="113" Connection="Output" />
+      <Destination ToolID="115" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="115" Connection="Output" />
+      <Destination ToolID="116" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="4" Connection="Output" />
       <Destination ToolID="104" Connection="Input" />
     </Connection>
@@ -2901,11 +2902,11 @@ AND
     </Connection>
     <Connection>
       <Origin ToolID="6" Connection="Output" />
-      <Destination ToolID="10" Connection="Input" />
+      <Destination ToolID="64" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="6" Connection="Output" />
-      <Destination ToolID="64" Connection="Input" />
+      <Destination ToolID="122" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="61" Connection="Output" />
@@ -2926,6 +2927,14 @@ AND
     <Connection>
       <Origin ToolID="104" Connection="True" />
       <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="123" Connection="Output" />
+      <Destination ToolID="124" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="124" Connection="Output" />
+      <Destination ToolID="125" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>

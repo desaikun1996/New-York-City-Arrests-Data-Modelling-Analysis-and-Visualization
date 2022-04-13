@@ -151,6 +151,60 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
     </Node>
+    <Node ToolID="115">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2298" y="1038" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="ARREST_KEY" selected="True" />
+            <SelectField field="Date_Key" selected="True" />
+            <SelectField field="PD_SK" selected="True" />
+            <SelectField field="KY_SK" selected="True" />
+            <SelectField field="LawCode_SK" selected="True" />
+            <SelectField field="LawCat_SK" selected="True" />
+            <SelectField field="ArrestBoro_SK" selected="True" />
+            <SelectField field="JurisdictionCode_SK" selected="True" />
+            <SelectField field="Perpetrator_SK" selected="True" />
+            <SelectField field="Geo_SK" selected="True" />
+            <SelectField field="ARREST_PRECINCT" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="116">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="2394" y="1038" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="19" MaxRecords="" />
+          <Passwords />
+          <FormatSpecificOptions>
+            <NoSpatialIndex>False</NoSpatialIndex>
+            <SaveSource>True</SaveSource>
+            <WriteCompatibleVersion>False</WriteCompatibleVersion>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
     <Node ToolID="82">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
         <Position x="401" y="1387" width="1113" height="319" />
@@ -2501,6 +2555,10 @@ AND
       <Origin ToolID="3" Connection="Output" />
       <Destination ToolID="114" Connection="Input" />
     </Connection>
+    <Connection>
+      <Origin ToolID="113" Connection="Output" />
+      <Destination ToolID="115" Connection="Input" />
+    </Connection>
     <Connection name="#4">
       <Origin ToolID="114" Connection="Output" />
       <Destination ToolID="113" Connection="Input" />
@@ -2540,6 +2598,10 @@ AND
     <Connection name="#1">
       <Origin ToolID="66" Connection="Output" />
       <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="115" Connection="Output" />
+      <Destination ToolID="116" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="19" Connection="Output" />

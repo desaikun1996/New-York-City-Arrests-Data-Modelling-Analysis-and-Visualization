@@ -133,6 +133,7 @@
             <Configuration>
               <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Dim_KYCD</File>
               <Passwords />
+              <CachedCosmeticName />
               <FormatSpecificOptions>
                 <TransactionMessages>False</TransactionMessages>
                 <Geometry>True</Geometry>
@@ -153,6 +154,9 @@
 Query=Dim_KYCD</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>
@@ -249,51 +253,73 @@ AND
     </Node>
     <Node ToolID="1">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="162" y="606" />
+        <Position x="138" y="606" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <Passwords />
-          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv</File>
+          <CachedCosmeticName />
+          <File RecordLimit="" FileFormat="23">aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,
+	NYCArrest_Staging.ARREST_DATE,
+	NYCArrest_Staging.PD_CD,
+	NYCArrest_Staging.PD_DESC,
+	NYCArrest_Staging.KY_CD,
+	NYCArrest_Staging.OFNS_DESC,
+	NYCArrest_Staging.LAW_CODE,
+	NYCArrest_Staging.LAW_CAT_CD,
+	NYCArrest_Staging.ARREST_BORO,
+	NYCArrest_Staging.ARREST_PRECINCT,
+	NYCArrest_Staging.JURISDICTION_CODE,
+	NYCArrest_Staging.AGE_GROUP,
+	NYCArrest_Staging.PERP_SEX,
+	NYCArrest_Staging.PERP_RACE,
+	NYCArrest_Staging.X_COORD_CD,
+	NYCArrest_Staging.Y_COORD_CD,
+	NYCArrest_Staging.Latitude,
+	NYCArrest_Staging.Longitude,
+	NYCArrest_Staging.[New Georeferenced Column] 
+from NYCArrest_Staging</File>
           <FormatSpecificOptions>
-            <HeaderRow>True</HeaderRow>
-            <IgnoreErrors>False</IgnoreErrors>
-            <AllowShareWrite>False</AllowShareWrite>
-            <ImportLine>1</ImportLine>
-            <FieldLen>254</FieldLen>
-            <SingleThreadRead>False</SingleThreadRead>
-            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
-            <Delimeter>\t</Delimeter>
-            <QuoteRecordBreak>False</QuoteRecordBreak>
-            <CodePage>28591</CodePage>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
           </FormatSpecificOptions>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>NYPD_Arrest_Data__Year_to_Date_.tsv</DefaultAnnotationText>
+          <DefaultAnnotationText>aka:LAPTOP-B40PCB4S
+Query=select NYCArrest_Staging.ARR...</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="ARREST_KEY" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
-            <Field name="ARREST_DATE" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
-            <Field name="PD_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
-            <Field name="PD_DESC" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
-            <Field name="KY_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
-            <Field name="OFNS_DESC" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
-            <Field name="LAW_CODE" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
-            <Field name="LAW_CAT_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
-            <Field name="ARREST_BORO" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
-            <Field name="ARREST_PRECINCT" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
-            <Field name="JURISDICTION_CODE" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
-            <Field name="AGE_GROUP" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
-            <Field name="PERP_SEX" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
-            <Field name="PERP_RACE" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
-            <Field name="X_COORD_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
-            <Field name="Y_COORD_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
-            <Field name="Latitude" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
-            <Field name="Longitude" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
-            <Field name="New Georeferenced Column" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+            <Field name="ARREST_KEY" size="254" source="File: aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,&#xA;	NYCArrest_Staging.ARREST_DATE,&#xA;	NYCArrest_Staging.PD_CD,&#xA;	NYCArrest_Staging.PD_DESC,&#xA;	NYCArrest_Staging.KY_CD,&#xA;	NYCArrest_Staging.OFNS_DESC,&#xA;	NYCArrest_Staging.LAW_CODE,&#xA;	NYCArrest_Staging.LAW_CAT_CD,&#xA;	NYCArrest_Staging.ARREST_BORO,&#xA;	NYCArrest_Staging.ARREST_PRECINCT,&#xA;	NYCArrest_Staging.JURISDICTION_CODE,&#xA;	NYCArrest_Staging.AGE_GROUP,&#xA;	NYCArrest_Staging.PERP_SEX,&#xA;	NYCArrest_Staging.PERP_RACE,&#xA;	NYCArrest_Staging.X_COORD_CD,&#xA;	NYCArrest_Staging.Y_COORD_CD,&#xA;	NYCArrest_Staging.Latitude,&#xA;	NYCArrest_Staging.Longitude,&#xA;	NYCArrest_Staging.[New Georeferenced Column] &#xA;from NYCArrest_Staging" type="V_WString" />
+            <Field name="ARREST_DATE" size="254" source="File: aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,&#xA;	NYCArrest_Staging.ARREST_DATE,&#xA;	NYCArrest_Staging.PD_CD,&#xA;	NYCArrest_Staging.PD_DESC,&#xA;	NYCArrest_Staging.KY_CD,&#xA;	NYCArrest_Staging.OFNS_DESC,&#xA;	NYCArrest_Staging.LAW_CODE,&#xA;	NYCArrest_Staging.LAW_CAT_CD,&#xA;	NYCArrest_Staging.ARREST_BORO,&#xA;	NYCArrest_Staging.ARREST_PRECINCT,&#xA;	NYCArrest_Staging.JURISDICTION_CODE,&#xA;	NYCArrest_Staging.AGE_GROUP,&#xA;	NYCArrest_Staging.PERP_SEX,&#xA;	NYCArrest_Staging.PERP_RACE,&#xA;	NYCArrest_Staging.X_COORD_CD,&#xA;	NYCArrest_Staging.Y_COORD_CD,&#xA;	NYCArrest_Staging.Latitude,&#xA;	NYCArrest_Staging.Longitude,&#xA;	NYCArrest_Staging.[New Georeferenced Column] &#xA;from NYCArrest_Staging" type="V_WString" />
+            <Field name="PD_CD" size="254" source="File: aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,&#xA;	NYCArrest_Staging.ARREST_DATE,&#xA;	NYCArrest_Staging.PD_CD,&#xA;	NYCArrest_Staging.PD_DESC,&#xA;	NYCArrest_Staging.KY_CD,&#xA;	NYCArrest_Staging.OFNS_DESC,&#xA;	NYCArrest_Staging.LAW_CODE,&#xA;	NYCArrest_Staging.LAW_CAT_CD,&#xA;	NYCArrest_Staging.ARREST_BORO,&#xA;	NYCArrest_Staging.ARREST_PRECINCT,&#xA;	NYCArrest_Staging.JURISDICTION_CODE,&#xA;	NYCArrest_Staging.AGE_GROUP,&#xA;	NYCArrest_Staging.PERP_SEX,&#xA;	NYCArrest_Staging.PERP_RACE,&#xA;	NYCArrest_Staging.X_COORD_CD,&#xA;	NYCArrest_Staging.Y_COORD_CD,&#xA;	NYCArrest_Staging.Latitude,&#xA;	NYCArrest_Staging.Longitude,&#xA;	NYCArrest_Staging.[New Georeferenced Column] &#xA;from NYCArrest_Staging" type="V_WString" />
+            <Field name="PD_DESC" size="254" source="File: aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,&#xA;	NYCArrest_Staging.ARREST_DATE,&#xA;	NYCArrest_Staging.PD_CD,&#xA;	NYCArrest_Staging.PD_DESC,&#xA;	NYCArrest_Staging.KY_CD,&#xA;	NYCArrest_Staging.OFNS_DESC,&#xA;	NYCArrest_Staging.LAW_CODE,&#xA;	NYCArrest_Staging.LAW_CAT_CD,&#xA;	NYCArrest_Staging.ARREST_BORO,&#xA;	NYCArrest_Staging.ARREST_PRECINCT,&#xA;	NYCArrest_Staging.JURISDICTION_CODE,&#xA;	NYCArrest_Staging.AGE_GROUP,&#xA;	NYCArrest_Staging.PERP_SEX,&#xA;	NYCArrest_Staging.PERP_RACE,&#xA;	NYCArrest_Staging.X_COORD_CD,&#xA;	NYCArrest_Staging.Y_COORD_CD,&#xA;	NYCArrest_Staging.Latitude,&#xA;	NYCArrest_Staging.Longitude,&#xA;	NYCArrest_Staging.[New Georeferenced Column] &#xA;from NYCArrest_Staging" type="V_WString" />
+            <Field name="KY_CD" size="254" source="File: aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,&#xA;	NYCArrest_Staging.ARREST_DATE,&#xA;	NYCArrest_Staging.PD_CD,&#xA;	NYCArrest_Staging.PD_DESC,&#xA;	NYCArrest_Staging.KY_CD,&#xA;	NYCArrest_Staging.OFNS_DESC,&#xA;	NYCArrest_Staging.LAW_CODE,&#xA;	NYCArrest_Staging.LAW_CAT_CD,&#xA;	NYCArrest_Staging.ARREST_BORO,&#xA;	NYCArrest_Staging.ARREST_PRECINCT,&#xA;	NYCArrest_Staging.JURISDICTION_CODE,&#xA;	NYCArrest_Staging.AGE_GROUP,&#xA;	NYCArrest_Staging.PERP_SEX,&#xA;	NYCArrest_Staging.PERP_RACE,&#xA;	NYCArrest_Staging.X_COORD_CD,&#xA;	NYCArrest_Staging.Y_COORD_CD,&#xA;	NYCArrest_Staging.Latitude,&#xA;	NYCArrest_Staging.Longitude,&#xA;	NYCArrest_Staging.[New Georeferenced Column] &#xA;from NYCArrest_Staging" type="V_WString" />
+            <Field name="OFNS_DESC" size="254" source="File: aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,&#xA;	NYCArrest_Staging.ARREST_DATE,&#xA;	NYCArrest_Staging.PD_CD,&#xA;	NYCArrest_Staging.PD_DESC,&#xA;	NYCArrest_Staging.KY_CD,&#xA;	NYCArrest_Staging.OFNS_DESC,&#xA;	NYCArrest_Staging.LAW_CODE,&#xA;	NYCArrest_Staging.LAW_CAT_CD,&#xA;	NYCArrest_Staging.ARREST_BORO,&#xA;	NYCArrest_Staging.ARREST_PRECINCT,&#xA;	NYCArrest_Staging.JURISDICTION_CODE,&#xA;	NYCArrest_Staging.AGE_GROUP,&#xA;	NYCArrest_Staging.PERP_SEX,&#xA;	NYCArrest_Staging.PERP_RACE,&#xA;	NYCArrest_Staging.X_COORD_CD,&#xA;	NYCArrest_Staging.Y_COORD_CD,&#xA;	NYCArrest_Staging.Latitude,&#xA;	NYCArrest_Staging.Longitude,&#xA;	NYCArrest_Staging.[New Georeferenced Column] &#xA;from NYCArrest_Staging" type="V_WString" />
+            <Field name="LAW_CODE" size="254" source="File: aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,&#xA;	NYCArrest_Staging.ARREST_DATE,&#xA;	NYCArrest_Staging.PD_CD,&#xA;	NYCArrest_Staging.PD_DESC,&#xA;	NYCArrest_Staging.KY_CD,&#xA;	NYCArrest_Staging.OFNS_DESC,&#xA;	NYCArrest_Staging.LAW_CODE,&#xA;	NYCArrest_Staging.LAW_CAT_CD,&#xA;	NYCArrest_Staging.ARREST_BORO,&#xA;	NYCArrest_Staging.ARREST_PRECINCT,&#xA;	NYCArrest_Staging.JURISDICTION_CODE,&#xA;	NYCArrest_Staging.AGE_GROUP,&#xA;	NYCArrest_Staging.PERP_SEX,&#xA;	NYCArrest_Staging.PERP_RACE,&#xA;	NYCArrest_Staging.X_COORD_CD,&#xA;	NYCArrest_Staging.Y_COORD_CD,&#xA;	NYCArrest_Staging.Latitude,&#xA;	NYCArrest_Staging.Longitude,&#xA;	NYCArrest_Staging.[New Georeferenced Column] &#xA;from NYCArrest_Staging" type="V_WString" />
+            <Field name="LAW_CAT_CD" size="254" source="File: aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,&#xA;	NYCArrest_Staging.ARREST_DATE,&#xA;	NYCArrest_Staging.PD_CD,&#xA;	NYCArrest_Staging.PD_DESC,&#xA;	NYCArrest_Staging.KY_CD,&#xA;	NYCArrest_Staging.OFNS_DESC,&#xA;	NYCArrest_Staging.LAW_CODE,&#xA;	NYCArrest_Staging.LAW_CAT_CD,&#xA;	NYCArrest_Staging.ARREST_BORO,&#xA;	NYCArrest_Staging.ARREST_PRECINCT,&#xA;	NYCArrest_Staging.JURISDICTION_CODE,&#xA;	NYCArrest_Staging.AGE_GROUP,&#xA;	NYCArrest_Staging.PERP_SEX,&#xA;	NYCArrest_Staging.PERP_RACE,&#xA;	NYCArrest_Staging.X_COORD_CD,&#xA;	NYCArrest_Staging.Y_COORD_CD,&#xA;	NYCArrest_Staging.Latitude,&#xA;	NYCArrest_Staging.Longitude,&#xA;	NYCArrest_Staging.[New Georeferenced Column] &#xA;from NYCArrest_Staging" type="V_WString" />
+            <Field name="ARREST_BORO" size="254" source="File: aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,&#xA;	NYCArrest_Staging.ARREST_DATE,&#xA;	NYCArrest_Staging.PD_CD,&#xA;	NYCArrest_Staging.PD_DESC,&#xA;	NYCArrest_Staging.KY_CD,&#xA;	NYCArrest_Staging.OFNS_DESC,&#xA;	NYCArrest_Staging.LAW_CODE,&#xA;	NYCArrest_Staging.LAW_CAT_CD,&#xA;	NYCArrest_Staging.ARREST_BORO,&#xA;	NYCArrest_Staging.ARREST_PRECINCT,&#xA;	NYCArrest_Staging.JURISDICTION_CODE,&#xA;	NYCArrest_Staging.AGE_GROUP,&#xA;	NYCArrest_Staging.PERP_SEX,&#xA;	NYCArrest_Staging.PERP_RACE,&#xA;	NYCArrest_Staging.X_COORD_CD,&#xA;	NYCArrest_Staging.Y_COORD_CD,&#xA;	NYCArrest_Staging.Latitude,&#xA;	NYCArrest_Staging.Longitude,&#xA;	NYCArrest_Staging.[New Georeferenced Column] &#xA;from NYCArrest_Staging" type="V_WString" />
+            <Field name="ARREST_PRECINCT" size="254" source="File: aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,&#xA;	NYCArrest_Staging.ARREST_DATE,&#xA;	NYCArrest_Staging.PD_CD,&#xA;	NYCArrest_Staging.PD_DESC,&#xA;	NYCArrest_Staging.KY_CD,&#xA;	NYCArrest_Staging.OFNS_DESC,&#xA;	NYCArrest_Staging.LAW_CODE,&#xA;	NYCArrest_Staging.LAW_CAT_CD,&#xA;	NYCArrest_Staging.ARREST_BORO,&#xA;	NYCArrest_Staging.ARREST_PRECINCT,&#xA;	NYCArrest_Staging.JURISDICTION_CODE,&#xA;	NYCArrest_Staging.AGE_GROUP,&#xA;	NYCArrest_Staging.PERP_SEX,&#xA;	NYCArrest_Staging.PERP_RACE,&#xA;	NYCArrest_Staging.X_COORD_CD,&#xA;	NYCArrest_Staging.Y_COORD_CD,&#xA;	NYCArrest_Staging.Latitude,&#xA;	NYCArrest_Staging.Longitude,&#xA;	NYCArrest_Staging.[New Georeferenced Column] &#xA;from NYCArrest_Staging" type="V_WString" />
+            <Field name="JURISDICTION_CODE" size="254" source="File: aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,&#xA;	NYCArrest_Staging.ARREST_DATE,&#xA;	NYCArrest_Staging.PD_CD,&#xA;	NYCArrest_Staging.PD_DESC,&#xA;	NYCArrest_Staging.KY_CD,&#xA;	NYCArrest_Staging.OFNS_DESC,&#xA;	NYCArrest_Staging.LAW_CODE,&#xA;	NYCArrest_Staging.LAW_CAT_CD,&#xA;	NYCArrest_Staging.ARREST_BORO,&#xA;	NYCArrest_Staging.ARREST_PRECINCT,&#xA;	NYCArrest_Staging.JURISDICTION_CODE,&#xA;	NYCArrest_Staging.AGE_GROUP,&#xA;	NYCArrest_Staging.PERP_SEX,&#xA;	NYCArrest_Staging.PERP_RACE,&#xA;	NYCArrest_Staging.X_COORD_CD,&#xA;	NYCArrest_Staging.Y_COORD_CD,&#xA;	NYCArrest_Staging.Latitude,&#xA;	NYCArrest_Staging.Longitude,&#xA;	NYCArrest_Staging.[New Georeferenced Column] &#xA;from NYCArrest_Staging" type="V_WString" />
+            <Field name="AGE_GROUP" size="254" source="File: aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,&#xA;	NYCArrest_Staging.ARREST_DATE,&#xA;	NYCArrest_Staging.PD_CD,&#xA;	NYCArrest_Staging.PD_DESC,&#xA;	NYCArrest_Staging.KY_CD,&#xA;	NYCArrest_Staging.OFNS_DESC,&#xA;	NYCArrest_Staging.LAW_CODE,&#xA;	NYCArrest_Staging.LAW_CAT_CD,&#xA;	NYCArrest_Staging.ARREST_BORO,&#xA;	NYCArrest_Staging.ARREST_PRECINCT,&#xA;	NYCArrest_Staging.JURISDICTION_CODE,&#xA;	NYCArrest_Staging.AGE_GROUP,&#xA;	NYCArrest_Staging.PERP_SEX,&#xA;	NYCArrest_Staging.PERP_RACE,&#xA;	NYCArrest_Staging.X_COORD_CD,&#xA;	NYCArrest_Staging.Y_COORD_CD,&#xA;	NYCArrest_Staging.Latitude,&#xA;	NYCArrest_Staging.Longitude,&#xA;	NYCArrest_Staging.[New Georeferenced Column] &#xA;from NYCArrest_Staging" type="V_WString" />
+            <Field name="PERP_SEX" size="254" source="File: aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,&#xA;	NYCArrest_Staging.ARREST_DATE,&#xA;	NYCArrest_Staging.PD_CD,&#xA;	NYCArrest_Staging.PD_DESC,&#xA;	NYCArrest_Staging.KY_CD,&#xA;	NYCArrest_Staging.OFNS_DESC,&#xA;	NYCArrest_Staging.LAW_CODE,&#xA;	NYCArrest_Staging.LAW_CAT_CD,&#xA;	NYCArrest_Staging.ARREST_BORO,&#xA;	NYCArrest_Staging.ARREST_PRECINCT,&#xA;	NYCArrest_Staging.JURISDICTION_CODE,&#xA;	NYCArrest_Staging.AGE_GROUP,&#xA;	NYCArrest_Staging.PERP_SEX,&#xA;	NYCArrest_Staging.PERP_RACE,&#xA;	NYCArrest_Staging.X_COORD_CD,&#xA;	NYCArrest_Staging.Y_COORD_CD,&#xA;	NYCArrest_Staging.Latitude,&#xA;	NYCArrest_Staging.Longitude,&#xA;	NYCArrest_Staging.[New Georeferenced Column] &#xA;from NYCArrest_Staging" type="V_WString" />
+            <Field name="PERP_RACE" size="254" source="File: aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,&#xA;	NYCArrest_Staging.ARREST_DATE,&#xA;	NYCArrest_Staging.PD_CD,&#xA;	NYCArrest_Staging.PD_DESC,&#xA;	NYCArrest_Staging.KY_CD,&#xA;	NYCArrest_Staging.OFNS_DESC,&#xA;	NYCArrest_Staging.LAW_CODE,&#xA;	NYCArrest_Staging.LAW_CAT_CD,&#xA;	NYCArrest_Staging.ARREST_BORO,&#xA;	NYCArrest_Staging.ARREST_PRECINCT,&#xA;	NYCArrest_Staging.JURISDICTION_CODE,&#xA;	NYCArrest_Staging.AGE_GROUP,&#xA;	NYCArrest_Staging.PERP_SEX,&#xA;	NYCArrest_Staging.PERP_RACE,&#xA;	NYCArrest_Staging.X_COORD_CD,&#xA;	NYCArrest_Staging.Y_COORD_CD,&#xA;	NYCArrest_Staging.Latitude,&#xA;	NYCArrest_Staging.Longitude,&#xA;	NYCArrest_Staging.[New Georeferenced Column] &#xA;from NYCArrest_Staging" type="V_WString" />
+            <Field name="X_COORD_CD" size="254" source="File: aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,&#xA;	NYCArrest_Staging.ARREST_DATE,&#xA;	NYCArrest_Staging.PD_CD,&#xA;	NYCArrest_Staging.PD_DESC,&#xA;	NYCArrest_Staging.KY_CD,&#xA;	NYCArrest_Staging.OFNS_DESC,&#xA;	NYCArrest_Staging.LAW_CODE,&#xA;	NYCArrest_Staging.LAW_CAT_CD,&#xA;	NYCArrest_Staging.ARREST_BORO,&#xA;	NYCArrest_Staging.ARREST_PRECINCT,&#xA;	NYCArrest_Staging.JURISDICTION_CODE,&#xA;	NYCArrest_Staging.AGE_GROUP,&#xA;	NYCArrest_Staging.PERP_SEX,&#xA;	NYCArrest_Staging.PERP_RACE,&#xA;	NYCArrest_Staging.X_COORD_CD,&#xA;	NYCArrest_Staging.Y_COORD_CD,&#xA;	NYCArrest_Staging.Latitude,&#xA;	NYCArrest_Staging.Longitude,&#xA;	NYCArrest_Staging.[New Georeferenced Column] &#xA;from NYCArrest_Staging" type="V_WString" />
+            <Field name="Y_COORD_CD" size="254" source="File: aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,&#xA;	NYCArrest_Staging.ARREST_DATE,&#xA;	NYCArrest_Staging.PD_CD,&#xA;	NYCArrest_Staging.PD_DESC,&#xA;	NYCArrest_Staging.KY_CD,&#xA;	NYCArrest_Staging.OFNS_DESC,&#xA;	NYCArrest_Staging.LAW_CODE,&#xA;	NYCArrest_Staging.LAW_CAT_CD,&#xA;	NYCArrest_Staging.ARREST_BORO,&#xA;	NYCArrest_Staging.ARREST_PRECINCT,&#xA;	NYCArrest_Staging.JURISDICTION_CODE,&#xA;	NYCArrest_Staging.AGE_GROUP,&#xA;	NYCArrest_Staging.PERP_SEX,&#xA;	NYCArrest_Staging.PERP_RACE,&#xA;	NYCArrest_Staging.X_COORD_CD,&#xA;	NYCArrest_Staging.Y_COORD_CD,&#xA;	NYCArrest_Staging.Latitude,&#xA;	NYCArrest_Staging.Longitude,&#xA;	NYCArrest_Staging.[New Georeferenced Column] &#xA;from NYCArrest_Staging" type="V_WString" />
+            <Field name="Latitude" size="254" source="File: aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,&#xA;	NYCArrest_Staging.ARREST_DATE,&#xA;	NYCArrest_Staging.PD_CD,&#xA;	NYCArrest_Staging.PD_DESC,&#xA;	NYCArrest_Staging.KY_CD,&#xA;	NYCArrest_Staging.OFNS_DESC,&#xA;	NYCArrest_Staging.LAW_CODE,&#xA;	NYCArrest_Staging.LAW_CAT_CD,&#xA;	NYCArrest_Staging.ARREST_BORO,&#xA;	NYCArrest_Staging.ARREST_PRECINCT,&#xA;	NYCArrest_Staging.JURISDICTION_CODE,&#xA;	NYCArrest_Staging.AGE_GROUP,&#xA;	NYCArrest_Staging.PERP_SEX,&#xA;	NYCArrest_Staging.PERP_RACE,&#xA;	NYCArrest_Staging.X_COORD_CD,&#xA;	NYCArrest_Staging.Y_COORD_CD,&#xA;	NYCArrest_Staging.Latitude,&#xA;	NYCArrest_Staging.Longitude,&#xA;	NYCArrest_Staging.[New Georeferenced Column] &#xA;from NYCArrest_Staging" type="V_WString" />
+            <Field name="Longitude" size="254" source="File: aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,&#xA;	NYCArrest_Staging.ARREST_DATE,&#xA;	NYCArrest_Staging.PD_CD,&#xA;	NYCArrest_Staging.PD_DESC,&#xA;	NYCArrest_Staging.KY_CD,&#xA;	NYCArrest_Staging.OFNS_DESC,&#xA;	NYCArrest_Staging.LAW_CODE,&#xA;	NYCArrest_Staging.LAW_CAT_CD,&#xA;	NYCArrest_Staging.ARREST_BORO,&#xA;	NYCArrest_Staging.ARREST_PRECINCT,&#xA;	NYCArrest_Staging.JURISDICTION_CODE,&#xA;	NYCArrest_Staging.AGE_GROUP,&#xA;	NYCArrest_Staging.PERP_SEX,&#xA;	NYCArrest_Staging.PERP_RACE,&#xA;	NYCArrest_Staging.X_COORD_CD,&#xA;	NYCArrest_Staging.Y_COORD_CD,&#xA;	NYCArrest_Staging.Latitude,&#xA;	NYCArrest_Staging.Longitude,&#xA;	NYCArrest_Staging.[New Georeferenced Column] &#xA;from NYCArrest_Staging" type="V_WString" />
+            <Field name="New Georeferenced Column" size="254" source="File: aka:LAPTOP-B40PCB4S|||select NYCArrest_Staging.ARREST_KEY,&#xA;	NYCArrest_Staging.ARREST_DATE,&#xA;	NYCArrest_Staging.PD_CD,&#xA;	NYCArrest_Staging.PD_DESC,&#xA;	NYCArrest_Staging.KY_CD,&#xA;	NYCArrest_Staging.OFNS_DESC,&#xA;	NYCArrest_Staging.LAW_CODE,&#xA;	NYCArrest_Staging.LAW_CAT_CD,&#xA;	NYCArrest_Staging.ARREST_BORO,&#xA;	NYCArrest_Staging.ARREST_PRECINCT,&#xA;	NYCArrest_Staging.JURISDICTION_CODE,&#xA;	NYCArrest_Staging.AGE_GROUP,&#xA;	NYCArrest_Staging.PERP_SEX,&#xA;	NYCArrest_Staging.PERP_RACE,&#xA;	NYCArrest_Staging.X_COORD_CD,&#xA;	NYCArrest_Staging.Y_COORD_CD,&#xA;	NYCArrest_Staging.Latitude,&#xA;	NYCArrest_Staging.Longitude,&#xA;	NYCArrest_Staging.[New Georeferenced Column] &#xA;from NYCArrest_Staging" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -301,7 +327,7 @@ AND
     </Node>
     <Node ToolID="3">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="294" y="606" />
+        <Position x="318" y="594" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -455,6 +481,7 @@ AND
             <Configuration>
               <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Dim_AgeGroup</File>
               <Passwords />
+              <CachedCosmeticName />
               <FormatSpecificOptions>
                 <TransactionMessages>False</TransactionMessages>
                 <Geometry>True</Geometry>
@@ -485,7 +512,7 @@ Query=Dim_AgeGroup</DefaultAnnotationText>
     </Node>
     <Node ToolID="102">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="2237" y="4301" width="781" height="339" />
+        <Position x="2237" y="4301" width="781" height="303" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -560,28 +587,9 @@ Query=Dim_AgeGroup</DefaultAnnotationText>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
         </Node>
-        <Node ToolID="52">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="2646" y="4434" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <FormulaFields>
-                <FormulaField expression="IF [ArrestBoro_Type]=&quot;B&quot; THEN &quot;Bronx&quot; &#xA;ELSEIF [ArrestBoro_Type]=&quot;S&quot; THEN &quot;Staten Island&quot; &#xA;ELSEIF [ArrestBoro_Type]=&quot;K&quot; THEN &quot;Brooklyn&quot; &#xA;ELSEIF [ArrestBoro_Type]=&quot;M&quot; THEN &quot;Manhattan&quot; &#xA;ELSEIF [ArrestBoro_Type]=&quot;Q&quot; THEN &quot;Queens&quot; &#xA;ELSE &quot;&quot; ENDIF" field="ArrestBoro_Desc" size="1073741823" type="V_WString" />
-              </FormulaFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText>ArrestBoro_Desc = IF [ArrestBoro_Type]="B" THEN "Bronx" 
-ELSEIF [ArrestBoro_Type...</DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-        </Node>
         <Node ToolID="53">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="2742" y="4434" />
+            <Position x="2682" y="4434" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -590,7 +598,6 @@ ELSEIF [ArrestBoro_Type...</DefaultAnnotationText>
               <SelectFields>
                 <SelectField field="ArrestBoro_SK" selected="True" />
                 <SelectField field="ArrestBoro_Type" selected="True" />
-                <SelectField field="ArrestBoro_Desc" selected="True" />
                 <SelectField field="*Unknown" selected="False" />
               </SelectFields>
             </Configuration>
@@ -719,10 +726,10 @@ Query=Dim_CatCD</DefaultAnnotationText>
                   <PeriodType>
                   </PeriodType>
                   <PeriodCount>0</PeriodCount>
-                  <StartDate>2022-04-12 14:16:51</StartDate>
-                  <EndDate>2022-04-12 14:16:51</EndDate>
                   <Operand>
                   </Operand>
+                  <StartDate>2022-04-12 14:16:51</StartDate>
+                  <EndDate>2022-04-12 14:16:51</EndDate>
                 </Operands>
               </Simple>
             </Configuration>
@@ -843,6 +850,7 @@ Query=Dim_CatCD</DefaultAnnotationText>
             <Configuration>
               <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Dim_LawCode</File>
               <Passwords />
+              <CachedCosmeticName />
               <FormatSpecificOptions>
                 <TransactionMessages>False</TransactionMessages>
                 <Geometry>True</Geometry>
@@ -863,6 +871,9 @@ Query=Dim_CatCD</DefaultAnnotationText>
 Query=Dim_LawCode</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>
@@ -1195,7 +1206,7 @@ AND
     </Node>
     <Node ToolID="82">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="1985" y="2657" width="1113" height="321" />
+        <Position x="1985" y="2657" width="1113" height="333" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1269,7 +1280,7 @@ AND
         </Node>
         <Node ToolID="21">
           <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-            <Position x="2298" y="2802" />
+            <Position x="2298" y="2814" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1289,7 +1300,7 @@ AND
         </Node>
         <Node ToolID="25">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="2490" y="2802" />
+            <Position x="2490" y="2814" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1308,7 +1319,7 @@ AND
         </Node>
         <Node ToolID="26">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="2394" y="2802" />
+            <Position x="2394" y="2814" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1327,7 +1338,7 @@ AND
         </Node>
         <Node ToolID="27">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="2586" y="2802" />
+            <Position x="2586" y="2814" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1346,7 +1357,7 @@ AND
         </Node>
         <Node ToolID="28">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="2682" y="2802" />
+            <Position x="2682" y="2814" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1365,7 +1376,7 @@ AND
         </Node>
         <Node ToolID="29">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="2778" y="2802" />
+            <Position x="2778" y="2814" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1383,7 +1394,7 @@ AND
         </Node>
         <Node ToolID="30">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="2874" y="2802" />
+            <Position x="2874" y="2814" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1409,12 +1420,13 @@ AND
         </Node>
         <Node ToolID="38">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="2970" y="2802" />
+            <Position x="2970" y="2814" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Dim_Date</File>
               <Passwords />
+              <CachedCosmeticName />
               <FormatSpecificOptions>
                 <TransactionMessages>False</TransactionMessages>
                 <Geometry>True</Geometry>
@@ -1435,6 +1447,9 @@ AND
 Query=Dim_Date</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>
@@ -1461,7 +1476,7 @@ Query=Dim_Date</DefaultAnnotationText>
         </Node>
         <Node ToolID="80">
           <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-            <Position x="2562" y="2718" />
+            <Position x="2874" y="2718" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1487,7 +1502,7 @@ Query=Dim_Date</DefaultAnnotationText>
         </Node>
         <Node ToolID="81">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="2670" y="2718" />
+            <Position x="2982" y="2718" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1542,7 +1557,7 @@ Query=Dim_Date</DefaultAnnotationText>
     </Node>
     <Node ToolID="78">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="2153" y="2213" width="781" height="324" />
+        <Position x="2153" y="2213" width="781" height="279" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1617,25 +1632,6 @@ Query=Dim_Date</DefaultAnnotationText>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
         </Node>
-        <Node ToolID="23">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="2562" y="2346" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <FormulaFields>
-                <FormulaField expression="IF [LAW_CAT_CD]=&quot;F&quot; THEN &quot;Felony&quot; &#xA;ELSEIF [LAW_CAT_CD]=&quot;M&quot; THEN &quot;Misdemeanor&quot; &#xA;ELSE &quot;Violation&quot; ENDIF" field="LawCatCD_Desc" size="1073741823" type="V_WString" />
-              </FormulaFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText>LawCatCD_Desc = IF [LAW_CAT_CD]="F" THEN "Felony" 
-ELSEIF [LAW_CAT_CD]="M" THEN ...</DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-        </Node>
         <Node ToolID="24">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
             <Position x="2658" y="2346" />
@@ -1647,7 +1643,6 @@ ELSEIF [LAW_CAT_CD]="M" THEN ...</DefaultAnnotationText>
               <SelectFields>
                 <SelectField field="LawCat_SK" selected="True" />
                 <SelectField field="LAW_CAT_CD" selected="True" />
-                <SelectField field="LawCatCD_Desc" selected="True" />
                 <SelectField field="*Unknown" selected="False" />
               </SelectFields>
             </Configuration>
@@ -1667,6 +1662,7 @@ ELSEIF [LAW_CAT_CD]="M" THEN ...</DefaultAnnotationText>
             <Configuration>
               <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Dim_CatCD</File>
               <Passwords />
+              <CachedCosmeticName />
               <FormatSpecificOptions>
                 <TransactionMessages>False</TransactionMessages>
                 <Geometry>True</Geometry>
@@ -1687,6 +1683,9 @@ ELSEIF [LAW_CAT_CD]="M" THEN ...</DefaultAnnotationText>
 Query=Dim_CatCD</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>
@@ -1775,10 +1774,10 @@ Query=Dim_CatCD</DefaultAnnotationText>
                   <PeriodType>
                   </PeriodType>
                   <PeriodCount>0</PeriodCount>
-                  <StartDate>2022-04-12 14:14:49</StartDate>
-                  <EndDate>2022-04-12 14:14:49</EndDate>
                   <Operand>
                   </Operand>
+                  <StartDate>2022-04-12 14:14:49</StartDate>
+                  <EndDate>2022-04-12 14:14:49</EndDate>
                 </Operands>
               </Simple>
             </Configuration>
@@ -2049,7 +2048,7 @@ AND
     </Node>
     <Node ToolID="127">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="4337" y="2465" width="324" height="195" />
+        <Position x="4337" y="2465" width="336" height="207" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -2136,12 +2135,13 @@ AND
         </Node>
         <Node ToolID="116">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="4530" y="2514" />
+            <Position x="4542" y="2526" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Fact_Arrest</File>
               <Passwords />
+              <CachedCosmeticName />
               <FormatSpecificOptions>
                 <TransactionMessages>False</TransactionMessages>
                 <Geometry>True</Geometry>
@@ -2172,7 +2172,7 @@ Query=Fact_Arrest</DefaultAnnotationText>
     </Node>
     <Node ToolID="67">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="2249" y="605" width="937" height="435" />
+        <Position x="2249" y="605" width="949" height="435" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -2340,7 +2340,7 @@ Query=Fact_Arrest</DefaultAnnotationText>
         </Node>
         <Node ToolID="66">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="3102" y="666" />
+            <Position x="3114" y="678" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2393,7 +2393,11 @@ AND
               <OrderChanged value="False" />
               <CommaDecimal value="False" />
               <SelectFields>
-                <SelectField field="*Unknown" selected="True" />
+                <SelectField field="Perpetrator_SK" selected="True" />
+                <SelectField field="AGE_GROUP" selected="True" />
+                <SelectField field="PERP_SEX" selected="True" />
+                <SelectField field="PERP_RACE" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
               </SelectFields>
             </Configuration>
             <Annotation DisplayMode="0">
@@ -2462,6 +2466,7 @@ AND
             <Configuration>
               <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Dim_PerpetratorDetails</File>
               <Passwords />
+              <CachedCosmeticName />
               <FormatSpecificOptions>
                 <TransactionMessages>False</TransactionMessages>
                 <Geometry>True</Geometry>
@@ -2598,10 +2603,6 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="3" Connection="Output" />
-      <Destination ToolID="61" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="3" Connection="Output" />
       <Destination ToolID="68" Connection="Input" />
     </Connection>
     <Connection>
@@ -2637,6 +2638,10 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
       <Destination ToolID="117" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="61" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="117" Connection="Output" />
       <Destination ToolID="118" Connection="Input" />
     </Connection>
@@ -2670,10 +2675,6 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="51" Connection="Output" />
-      <Destination ToolID="52" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="52" Connection="Output" />
       <Destination ToolID="53" Connection="Input" />
     </Connection>
     <Connection>
@@ -2822,10 +2823,6 @@ Query=Dim_PerpetratorDetails</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="17" Connection="Output" />
-      <Destination ToolID="23" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="23" Connection="Output" />
       <Destination ToolID="24" Connection="Input" />
     </Connection>
     <Connection>

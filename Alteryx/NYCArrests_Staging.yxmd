@@ -1,0 +1,367 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.3">
+  <Nodes>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="149" y="388" width="420" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>HistoricData_IntoStaging</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+          <Caption>HistoricData_IntoStaging</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="174" y="437" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>\t</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>NYPD_Arrests_Data__Historic_.tsv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="ARREST_KEY" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv" type="V_WString" />
+                <Field name="ARREST_DATE" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv" type="V_WString" />
+                <Field name="PD_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv" type="V_WString" />
+                <Field name="PD_DESC" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv" type="V_WString" />
+                <Field name="KY_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv" type="V_WString" />
+                <Field name="OFNS_DESC" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv" type="V_WString" />
+                <Field name="LAW_CODE" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv" type="V_WString" />
+                <Field name="LAW_CAT_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv" type="V_WString" />
+                <Field name="ARREST_BORO" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv" type="V_WString" />
+                <Field name="ARREST_PRECINCT" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv" type="V_WString" />
+                <Field name="JURISDICTION_CODE" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv" type="V_WString" />
+                <Field name="AGE_GROUP" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv" type="V_WString" />
+                <Field name="PERP_SEX" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv" type="V_WString" />
+                <Field name="PERP_RACE" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv" type="V_WString" />
+                <Field name="X_COORD_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv" type="V_WString" />
+                <Field name="Y_COORD_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv" type="V_WString" />
+                <Field name="Latitude" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv" type="V_WString" />
+                <Field name="Longitude" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv" type="V_WString" />
+                <Field name="Lon_Lat" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrests_Data__Historic_.tsv" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="294" y="438" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="ARREST_KEY" selected="True" />
+                <SelectField field="ARREST_DATE" selected="True" />
+                <SelectField field="PD_CD" selected="True" />
+                <SelectField field="PD_DESC" selected="True" />
+                <SelectField field="KY_CD" selected="True" />
+                <SelectField field="OFNS_DESC" selected="True" />
+                <SelectField field="LAW_CODE" selected="True" />
+                <SelectField field="LAW_CAT_CD" selected="True" />
+                <SelectField field="ARREST_BORO" selected="True" />
+                <SelectField field="ARREST_PRECINCT" selected="True" />
+                <SelectField field="JURISDICTION_CODE" selected="True" />
+                <SelectField field="AGE_GROUP" selected="True" />
+                <SelectField field="PERP_SEX" selected="True" />
+                <SelectField field="PERP_RACE" selected="True" />
+                <SelectField field="X_COORD_CD" selected="True" />
+                <SelectField field="Y_COORD_CD" selected="True" />
+                <SelectField field="Latitude" selected="True" />
+                <SelectField field="Longitude" selected="True" />
+                <SelectField field="New Georeferenced Column" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="438" y="438" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||NYCArrest_Staging</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Append</OutputOption>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:LAPTOP-B40PCB4S
+Query=NYCArrest_Staging</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="149" y="64" width="420" height="195" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>YTDData_IntoStaging</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="174" y="113" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>\t</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>NYPD_Arrest_Data__Year_to_Date_.tsv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="ARREST_KEY" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+                <Field name="ARREST_DATE" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+                <Field name="PD_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+                <Field name="PD_DESC" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+                <Field name="KY_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+                <Field name="OFNS_DESC" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+                <Field name="LAW_CODE" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+                <Field name="LAW_CAT_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+                <Field name="ARREST_BORO" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+                <Field name="ARREST_PRECINCT" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+                <Field name="JURISDICTION_CODE" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+                <Field name="AGE_GROUP" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+                <Field name="PERP_SEX" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+                <Field name="PERP_RACE" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+                <Field name="X_COORD_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+                <Field name="Y_COORD_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+                <Field name="Latitude" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+                <Field name="Longitude" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+                <Field name="New Georeferenced Column" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="294" y="114" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="ARREST_KEY" selected="True" />
+                <SelectField field="ARREST_DATE" selected="True" />
+                <SelectField field="PD_CD" selected="True" />
+                <SelectField field="PD_DESC" selected="True" />
+                <SelectField field="KY_CD" selected="True" />
+                <SelectField field="OFNS_DESC" selected="True" />
+                <SelectField field="LAW_CODE" selected="True" />
+                <SelectField field="LAW_CAT_CD" selected="True" />
+                <SelectField field="ARREST_BORO" selected="True" />
+                <SelectField field="ARREST_PRECINCT" selected="True" />
+                <SelectField field="JURISDICTION_CODE" selected="True" />
+                <SelectField field="AGE_GROUP" selected="True" />
+                <SelectField field="PERP_SEX" selected="True" />
+                <SelectField field="PERP_RACE" selected="True" />
+                <SelectField field="X_COORD_CD" selected="True" />
+                <SelectField field="Y_COORD_CD" selected="True" />
+                <SelectField field="Latitude" selected="True" />
+                <SelectField field="Longitude" selected="True" />
+                <SelectField field="New Georeferenced Column" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="438" y="114" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||NYCArrest_Staging</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Create</OutputOption>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:LAPTOP-B40PCB4S
+Query=NYCArrest_Staging</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>NYCArrests_Staging</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="e96d2928-725e-45d0-bbc6-8bb63176ee50" />
+      <Telemetry>
+        <PreviousWorkflowId value="22511d96-acd8-4758-9267-5164a41dc0c8" />
+        <OriginWorkflowId value="22511d96-acd8-4758-9267-5164a41dc0c8" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

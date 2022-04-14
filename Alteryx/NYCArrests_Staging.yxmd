@@ -11,9 +11,6 @@
           <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
           <Disabled value="True" />
           <Folded value="False" />
-          <Caption>HistoricData_IntoStaging</Caption>
-          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-          <Disabled value="False" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -163,6 +160,12 @@ Query=NYCArrest_Staging</DefaultAnnotationText>
           <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
           <Disabled value="False" />
           <Folded value="False" />
+          <Caption>YTDData_IntoStaging</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Caption>YTDData_IntoStaging</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -273,6 +276,7 @@ Query=NYCArrest_Staging</DefaultAnnotationText>
             <Configuration>
               <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||NYCArrest_Staging</File>
               <Passwords />
+              <CachedCosmeticName />
               <FormatSpecificOptions>
                 <TransactionMessages>False</TransactionMessages>
                 <Geometry>True</Geometry>

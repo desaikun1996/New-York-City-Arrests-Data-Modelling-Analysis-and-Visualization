@@ -1,0 +1,1798 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20214.22.0108.1039                               -->
+<workbook original-version='18.1' source-build='2021.4.3 (20214.22.0108.1039)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Fact_Arrest+ (NYCArrests_YTDOnly)' inline='true' name='federated.0fk500b0sbda0919i54dm1iynzwx' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='LAPTOP-B40PCB4S' name='sqlserver.0adunad0wedzpj11kklyp0fr8pwh'>
+            <connection IsolationLevel='ReadUncommitted' authentication='sspi' class='sqlserver' dbname='NYCArrests_YTDOnly' minimum-driver-version='SQL Server Native Client 10.0' odbc-native-protocol='yes' one-time-sql='' server='LAPTOP-B40PCB4S' sslmode='require' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Dim_AgeGroup' table='[dbo].[Dim_AgeGroup]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Fact_Arrest' table='[dbo].[Fact_Arrest]' type='table' />
+          <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Dim_ArrestBoro' table='[dbo].[Dim_ArrestBoro]' type='table' />
+          <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Dim_CatCD' table='[dbo].[Dim_CatCD]' type='table' />
+          <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Dim_Date' table='[dbo].[Dim_Date]' type='table' />
+          <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Dim_Geo' table='[dbo].[Dim_Geo]' type='table' />
+          <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Dim_KYCD' table='[dbo].[Dim_KYCD]' type='table' />
+          <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Dim_LawCode' table='[dbo].[Dim_LawCode]' type='table' />
+          <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Dim_PDCD' table='[dbo].[Dim_PDCD]' type='table' />
+          <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Dim_PerpetratorDetails' table='[dbo].[Dim_PerpetratorDetails]' type='table' />
+          <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Dim_AgeGroup' table='[dbo].[Dim_AgeGroup]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[AGE_GROUP]' value='[Dim_AgeGroup].[AGE_GROUP]' />
+          <map key='[ARREST_KEY]' value='[Fact_Arrest].[ARREST_KEY]' />
+          <map key='[ARREST_PRECINCT]' value='[Fact_Arrest].[ARREST_PRECINCT]' />
+          <map key='[AgeGroup_SK (Dim_AgeGroup)]' value='[Dim_AgeGroup].[AgeGroup_SK]' />
+          <map key='[AgeGroup_SK]' value='[Dim_PerpetratorDetails].[AgeGroup_SK]' />
+          <map key='[ArrestBoro_SK (Dim_ArrestBoro)]' value='[Dim_ArrestBoro].[ArrestBoro_SK]' />
+          <map key='[ArrestBoro_SK]' value='[Fact_Arrest].[ArrestBoro_SK]' />
+          <map key='[ArrestBoro_Type]' value='[Dim_ArrestBoro].[ArrestBoro_Type]' />
+          <map key='[ArrestDate_AK]' value='[Dim_Date].[ArrestDate_AK]' />
+          <map key='[ArrestDate_Day]' value='[Dim_Date].[ArrestDate_Day]' />
+          <map key='[ArrestDate_Month]' value='[Dim_Date].[ArrestDate_Month]' />
+          <map key='[ArrestDate_Quarter]' value='[Dim_Date].[ArrestDate_Quarter]' />
+          <map key='[ArrestDate_Year]' value='[Dim_Date].[ArrestDate_Year]' />
+          <map key='[Date_Key (Dim_Date)]' value='[Dim_Date].[Date_Key]' />
+          <map key='[Date_Key]' value='[Fact_Arrest].[Date_Key]' />
+          <map key='[Geo_SK (Dim_Geo)]' value='[Dim_Geo].[Geo_SK]' />
+          <map key='[Geo_SK]' value='[Fact_Arrest].[Geo_SK]' />
+          <map key='[JURISDICTION_CODE]' value='[Fact_Arrest].[JURISDICTION_CODE]' />
+          <map key='[KY_CD]' value='[Dim_KYCD].[KY_CD]' />
+          <map key='[KY_SK (Dim_KYCD)]' value='[Dim_KYCD].[KY_SK]' />
+          <map key='[KY_SK]' value='[Fact_Arrest].[KY_SK]' />
+          <map key='[LAW_CAT_CD]' value='[Dim_CatCD].[LAW_CAT_CD]' />
+          <map key='[LAW_CODE]' value='[Dim_LawCode].[LAW_CODE]' />
+          <map key='[Latitude]' value='[Dim_Geo].[Latitude]' />
+          <map key='[LawCat_SK (Dim_CatCD)]' value='[Dim_CatCD].[LawCat_SK]' />
+          <map key='[LawCat_SK]' value='[Fact_Arrest].[LawCat_SK]' />
+          <map key='[LawCode_SK (Dim_LawCode)]' value='[Dim_LawCode].[LawCode_SK]' />
+          <map key='[LawCode_SK]' value='[Fact_Arrest].[LawCode_SK]' />
+          <map key='[Longitude]' value='[Dim_Geo].[Longitude]' />
+          <map key='[OFNS_DESC]' value='[Dim_KYCD].[OFNS_DESC]' />
+          <map key='[PD_CD]' value='[Dim_PDCD].[PD_CD]' />
+          <map key='[PD_DESC]' value='[Dim_PDCD].[PD_DESC]' />
+          <map key='[PD_SK (Dim_PDCD)]' value='[Dim_PDCD].[PD_SK]' />
+          <map key='[PD_SK]' value='[Fact_Arrest].[PD_SK]' />
+          <map key='[PERP_RACE]' value='[Dim_PerpetratorDetails].[PERP_RACE]' />
+          <map key='[PERP_SEX]' value='[Dim_PerpetratorDetails].[PERP_SEX]' />
+          <map key='[Perpetrator_SK (Dim_PerpetratorDetails)]' value='[Dim_PerpetratorDetails].[Perpetrator_SK]' />
+          <map key='[Perpetrator_SK]' value='[Fact_Arrest].[Perpetrator_SK]' />
+          <map key='[X_COORD_CD]' value='[Dim_Geo].[X_COORD_CD]' />
+          <map key='[Y_COORD_CD]' value='[Dim_Geo].[Y_COORD_CD]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>ARREST_KEY</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ARREST_KEY]</local-name>
+            <parent-name>[Fact_Arrest]</parent-name>
+            <remote-alias>ARREST_KEY</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date_Key</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Date_Key]</local-name>
+            <parent-name>[Fact_Arrest]</parent-name>
+            <remote-alias>Date_Key</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PD_SK</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[PD_SK]</local-name>
+            <parent-name>[Fact_Arrest]</parent-name>
+            <remote-alias>PD_SK</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>KY_SK</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[KY_SK]</local-name>
+            <parent-name>[Fact_Arrest]</parent-name>
+            <remote-alias>KY_SK</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LawCode_SK</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[LawCode_SK]</local-name>
+            <parent-name>[Fact_Arrest]</parent-name>
+            <remote-alias>LawCode_SK</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LawCat_SK</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[LawCat_SK]</local-name>
+            <parent-name>[Fact_Arrest]</parent-name>
+            <remote-alias>LawCat_SK</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ArrestBoro_SK</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ArrestBoro_SK]</local-name>
+            <parent-name>[Fact_Arrest]</parent-name>
+            <remote-alias>ArrestBoro_SK</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Perpetrator_SK</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Perpetrator_SK]</local-name>
+            <parent-name>[Fact_Arrest]</parent-name>
+            <remote-alias>Perpetrator_SK</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Geo_SK</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Geo_SK]</local-name>
+            <parent-name>[Fact_Arrest]</parent-name>
+            <remote-alias>Geo_SK</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ARREST_PRECINCT</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ARREST_PRECINCT]</local-name>
+            <parent-name>[Fact_Arrest]</parent-name>
+            <remote-alias>ARREST_PRECINCT</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>JURISDICTION_CODE</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[JURISDICTION_CODE]</local-name>
+            <parent-name>[Fact_Arrest]</parent-name>
+            <remote-alias>JURISDICTION_CODE</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ArrestBoro_SK</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ArrestBoro_SK (Dim_ArrestBoro)]</local-name>
+            <parent-name>[Dim_ArrestBoro]</parent-name>
+            <remote-alias>ArrestBoro_SK</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_ArrestBoro_DC998C010EE048B9BF75D03D807C4FA7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ArrestBoro_Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ArrestBoro_Type]</local-name>
+            <parent-name>[Dim_ArrestBoro]</parent-name>
+            <remote-alias>ArrestBoro_Type</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_ArrestBoro_DC998C010EE048B9BF75D03D807C4FA7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LawCat_SK</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[LawCat_SK (Dim_CatCD)]</local-name>
+            <parent-name>[Dim_CatCD]</parent-name>
+            <remote-alias>LawCat_SK</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_CatCD_650F327698864652912A94D7867144C2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LAW_CAT_CD</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[LAW_CAT_CD]</local-name>
+            <parent-name>[Dim_CatCD]</parent-name>
+            <remote-alias>LAW_CAT_CD</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_CatCD_650F327698864652912A94D7867144C2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date_Key</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Date_Key (Dim_Date)]</local-name>
+            <parent-name>[Dim_Date]</parent-name>
+            <remote-alias>Date_Key</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ArrestDate_AK</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[ArrestDate_AK]</local-name>
+            <parent-name>[Dim_Date]</parent-name>
+            <remote-alias>ArrestDate_AK</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+              <attribute datatype='boolean' name='TypeIsDateTime2orDate'>true</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ArrestDate_Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ArrestDate_Year]</local-name>
+            <parent-name>[Dim_Date]</parent-name>
+            <remote-alias>ArrestDate_Year</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ArrestDate_Month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ArrestDate_Month]</local-name>
+            <parent-name>[Dim_Date]</parent-name>
+            <remote-alias>ArrestDate_Month</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ArrestDate_Day</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ArrestDate_Day]</local-name>
+            <parent-name>[Dim_Date]</parent-name>
+            <remote-alias>ArrestDate_Day</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ArrestDate_Quarter</remote-name>
+            <remote-type>2</remote-type>
+            <local-name>[ArrestDate_Quarter]</local-name>
+            <parent-name>[Dim_Date]</parent-name>
+            <remote-alias>ArrestDate_Quarter</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_SMALLINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SSHORT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Geo_SK</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Geo_SK (Dim_Geo)]</local-name>
+            <parent-name>[Dim_Geo]</parent-name>
+            <remote-alias>Geo_SK</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>X_COORD_CD</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[X_COORD_CD]</local-name>
+            <parent-name>[Dim_Geo]</parent-name>
+            <remote-alias>X_COORD_CD</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Y_COORD_CD</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Y_COORD_CD]</local-name>
+            <parent-name>[Dim_Geo]</parent-name>
+            <remote-alias>Y_COORD_CD</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[Dim_Geo]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[Dim_Geo]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>KY_SK</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[KY_SK (Dim_KYCD)]</local-name>
+            <parent-name>[Dim_KYCD]</parent-name>
+            <remote-alias>KY_SK</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_KYCD_3983427FA216483DB6A986B8C6B87FB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>KY_CD</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[KY_CD]</local-name>
+            <parent-name>[Dim_KYCD]</parent-name>
+            <remote-alias>KY_CD</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_KYCD_3983427FA216483DB6A986B8C6B87FB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OFNS_DESC</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[OFNS_DESC]</local-name>
+            <parent-name>[Dim_KYCD]</parent-name>
+            <remote-alias>OFNS_DESC</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_KYCD_3983427FA216483DB6A986B8C6B87FB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LawCode_SK</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[LawCode_SK (Dim_LawCode)]</local-name>
+            <parent-name>[Dim_LawCode]</parent-name>
+            <remote-alias>LawCode_SK</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_LawCode_C957BD167B4F4124BDCD94382371242B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LAW_CODE</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[LAW_CODE]</local-name>
+            <parent-name>[Dim_LawCode]</parent-name>
+            <remote-alias>LAW_CODE</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_LawCode_C957BD167B4F4124BDCD94382371242B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PD_SK</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[PD_SK (Dim_PDCD)]</local-name>
+            <parent-name>[Dim_PDCD]</parent-name>
+            <remote-alias>PD_SK</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_PDCD_D6971686FE1343AEA8CAF2DB1AB1587E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PD_CD</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[PD_CD]</local-name>
+            <parent-name>[Dim_PDCD]</parent-name>
+            <remote-alias>PD_CD</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_PDCD_D6971686FE1343AEA8CAF2DB1AB1587E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PD_DESC</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[PD_DESC]</local-name>
+            <parent-name>[Dim_PDCD]</parent-name>
+            <remote-alias>PD_DESC</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_PDCD_D6971686FE1343AEA8CAF2DB1AB1587E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Perpetrator_SK</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[Perpetrator_SK (Dim_PerpetratorDetails)]</local-name>
+            <parent-name>[Dim_PerpetratorDetails]</parent-name>
+            <remote-alias>Perpetrator_SK</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PERP_SEX</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[PERP_SEX]</local-name>
+            <parent-name>[Dim_PerpetratorDetails]</parent-name>
+            <remote-alias>PERP_SEX</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PERP_RACE</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[PERP_RACE]</local-name>
+            <parent-name>[Dim_PerpetratorDetails]</parent-name>
+            <remote-alias>PERP_RACE</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AgeGroup_SK</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[AgeGroup_SK]</local-name>
+            <parent-name>[Dim_PerpetratorDetails]</parent-name>
+            <remote-alias>AgeGroup_SK</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AgeGroup_SK</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[AgeGroup_SK (Dim_AgeGroup)]</local-name>
+            <parent-name>[Dim_AgeGroup]</parent-name>
+            <remote-alias>AgeGroup_SK</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_AgeGroup_8515590984BC479192A376193F7EB89B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AGE_GROUP</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[AGE_GROUP]</local-name>
+            <parent-name>[Dim_AgeGroup]</parent-name>
+            <remote-alias>AGE_GROUP</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_AgeGroup_8515590984BC479192A376193F7EB89B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Age Group' datatype='string' name='[AGE_GROUP]' role='dimension' type='nominal' />
+      <column caption='Arrest Key' datatype='string' name='[ARREST_KEY]' role='dimension' type='nominal' />
+      <column caption='Arrest Precinct' datatype='string' name='[ARREST_PRECINCT]' role='dimension' type='nominal' />
+      <column caption='AgeGroup SK (Dim AgeGroup)' datatype='integer' name='[AgeGroup_SK (Dim_AgeGroup)]' role='measure' type='quantitative' />
+      <column caption='AgeGroup SK' datatype='integer' name='[AgeGroup_SK]' role='measure' type='quantitative' />
+      <column caption='ArrestBoro SK (Dim ArrestBoro)' datatype='integer' name='[ArrestBoro_SK (Dim_ArrestBoro)]' role='measure' type='quantitative' />
+      <column caption='ArrestBoro SK' datatype='integer' name='[ArrestBoro_SK]' role='measure' type='quantitative' />
+      <column caption='ArrestBoro Type' datatype='string' name='[ArrestBoro_Type]' role='dimension' type='nominal' />
+      <column caption='ArrestDate AK' datatype='date' name='[ArrestDate_AK]' role='dimension' type='ordinal' />
+      <column caption='ArrestDate Day' datatype='string' name='[ArrestDate_Day]' role='dimension' type='nominal' />
+      <column caption='ArrestDate Month' datatype='integer' name='[ArrestDate_Month]' role='dimension' type='quantitative' />
+      <column caption='ArrestDate Quarter' datatype='integer' name='[ArrestDate_Quarter]' role='dimension' type='quantitative' />
+      <column caption='ArrestDate Year' datatype='integer' name='[ArrestDate_Year]' role='dimension' type='quantitative' />
+      <column caption='Date Key (Dim Date)' datatype='integer' name='[Date_Key (Dim_Date)]' role='dimension' type='ordinal' />
+      <column caption='Date Key' datatype='integer' name='[Date_Key]' role='dimension' type='ordinal' />
+      <column caption='Geo SK (Dim Geo)' datatype='integer' name='[Geo_SK (Dim_Geo)]' role='measure' type='quantitative' />
+      <column caption='Geo SK' datatype='integer' name='[Geo_SK]' role='measure' type='quantitative' />
+      <column caption='Jurisdiction Code' datatype='string' name='[JURISDICTION_CODE]' role='dimension' type='nominal' />
+      <column caption='Ky Cd' datatype='string' name='[KY_CD]' role='dimension' type='nominal' />
+      <column caption='KY SK (Dim KYCD)' datatype='integer' name='[KY_SK (Dim_KYCD)]' role='measure' type='quantitative' />
+      <column caption='Ky Sk' datatype='integer' name='[KY_SK]' role='measure' type='quantitative' />
+      <column caption='Law Cat Cd' datatype='string' name='[LAW_CAT_CD]' role='dimension' type='nominal' />
+      <column caption='Law Code' datatype='string' name='[LAW_CODE]' role='dimension' type='nominal' />
+      <column caption='LawCat SK (Dim CatCD)' datatype='integer' name='[LawCat_SK (Dim_CatCD)]' role='measure' type='quantitative' />
+      <column caption='LawCat SK' datatype='integer' name='[LawCat_SK]' role='measure' type='quantitative' />
+      <column caption='LawCode SK (Dim LawCode)' datatype='integer' name='[LawCode_SK (Dim_LawCode)]' role='measure' type='quantitative' />
+      <column caption='LawCode SK' datatype='integer' name='[LawCode_SK]' role='measure' type='quantitative' />
+      <column caption='Ofns Desc' datatype='string' name='[OFNS_DESC]' role='dimension' type='nominal' />
+      <column caption='Pd Cd' datatype='string' name='[PD_CD]' role='dimension' type='nominal' />
+      <column caption='Pd Desc' datatype='string' name='[PD_DESC]' role='dimension' type='nominal' />
+      <column caption='PD SK (Dim PDCD)' datatype='integer' name='[PD_SK (Dim_PDCD)]' role='measure' type='quantitative' />
+      <column caption='Pd Sk' datatype='integer' name='[PD_SK]' role='measure' type='quantitative' />
+      <column caption='Perp Race' datatype='string' name='[PERP_RACE]' role='dimension' type='nominal' />
+      <column caption='Perp Sex' datatype='string' name='[PERP_SEX]' role='dimension' type='nominal' />
+      <column caption='Perpetrator SK (Dim PerpetratorDetails)' datatype='integer' name='[Perpetrator_SK (Dim_PerpetratorDetails)]' role='measure' type='quantitative' />
+      <column caption='Perpetrator SK' datatype='integer' name='[Perpetrator_SK]' role='measure' type='quantitative' />
+      <column caption='X Coord Cd' datatype='string' name='[X_COORD_CD]' role='dimension' type='nominal' />
+      <column caption='Y Coord Cd' datatype='string' name='[Y_COORD_CD]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Dim_AgeGroup' datatype='table' name='[__tableau_internal_object_id__].[Dim_AgeGroup_8515590984BC479192A376193F7EB89B]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Dim_ArrestBoro' datatype='table' name='[__tableau_internal_object_id__].[Dim_ArrestBoro_DC998C010EE048B9BF75D03D807C4FA7]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Dim_CatCD' datatype='table' name='[__tableau_internal_object_id__].[Dim_CatCD_650F327698864652912A94D7867144C2]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Dim_Date' datatype='table' name='[__tableau_internal_object_id__].[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Dim_Geo' datatype='table' name='[__tableau_internal_object_id__].[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Dim_KYCD' datatype='table' name='[__tableau_internal_object_id__].[Dim_KYCD_3983427FA216483DB6A986B8C6B87FB0]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Dim_LawCode' datatype='table' name='[__tableau_internal_object_id__].[Dim_LawCode_C957BD167B4F4124BDCD94382371242B]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Dim_PDCD' datatype='table' name='[__tableau_internal_object_id__].[Dim_PDCD_D6971686FE1343AEA8CAF2DB1AB1587E]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Dim_PerpetratorDetails' datatype='table' name='[__tableau_internal_object_id__].[Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Fact_Arrest' datatype='table' name='[__tableau_internal_object_id__].[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]' role='measure' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='E:/GitHub_Repositories/New-York-City-Arrests-Data-Modelling--Analysis-and-Visualization/Tableau/Fact_Arrest+ (NYCArrests_YTDOnly).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='04/14/2022 05:37:32 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Dim_AgeGroup_8515590984BC479192A376193F7EB89B' table='[Extract].[Dim_AgeGroup_8515590984BC479192A376193F7EB89B]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <relation name='Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF' table='[Extract].[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]' type='table' />
+            <relation name='Dim_ArrestBoro_DC998C010EE048B9BF75D03D807C4FA7' table='[Extract].[Dim_ArrestBoro_DC998C010EE048B9BF75D03D807C4FA7]' type='table' />
+            <relation name='Dim_CatCD_650F327698864652912A94D7867144C2' table='[Extract].[Dim_CatCD_650F327698864652912A94D7867144C2]' type='table' />
+            <relation name='Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5' table='[Extract].[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]' type='table' />
+            <relation name='Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24' table='[Extract].[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24]' type='table' />
+            <relation name='Dim_KYCD_3983427FA216483DB6A986B8C6B87FB0' table='[Extract].[Dim_KYCD_3983427FA216483DB6A986B8C6B87FB0]' type='table' />
+            <relation name='Dim_LawCode_C957BD167B4F4124BDCD94382371242B' table='[Extract].[Dim_LawCode_C957BD167B4F4124BDCD94382371242B]' type='table' />
+            <relation name='Dim_PDCD_D6971686FE1343AEA8CAF2DB1AB1587E' table='[Extract].[Dim_PDCD_D6971686FE1343AEA8CAF2DB1AB1587E]' type='table' />
+            <relation name='Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144' table='[Extract].[Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144]' type='table' />
+            <relation name='Dim_AgeGroup_8515590984BC479192A376193F7EB89B' table='[Extract].[Dim_AgeGroup_8515590984BC479192A376193F7EB89B]' type='table' />
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <cols>
+            <map key='[AGE_GROUP]' value='[Dim_AgeGroup_8515590984BC479192A376193F7EB89B].[AGE_GROUP]' />
+            <map key='[ARREST_KEY]' value='[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF].[ARREST_KEY]' />
+            <map key='[ARREST_PRECINCT]' value='[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF].[ARREST_PRECINCT]' />
+            <map key='[AgeGroup_SK (Dim_AgeGroup)]' value='[Dim_AgeGroup_8515590984BC479192A376193F7EB89B].[AgeGroup_SK]' />
+            <map key='[AgeGroup_SK]' value='[Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144].[AgeGroup_SK]' />
+            <map key='[ArrestBoro_SK (Dim_ArrestBoro)]' value='[Dim_ArrestBoro_DC998C010EE048B9BF75D03D807C4FA7].[ArrestBoro_SK]' />
+            <map key='[ArrestBoro_SK]' value='[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF].[ArrestBoro_SK]' />
+            <map key='[ArrestBoro_Type]' value='[Dim_ArrestBoro_DC998C010EE048B9BF75D03D807C4FA7].[ArrestBoro_Type]' />
+            <map key='[ArrestDate_AK]' value='[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5].[ArrestDate_AK]' />
+            <map key='[ArrestDate_Day]' value='[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5].[ArrestDate_Day]' />
+            <map key='[ArrestDate_Month]' value='[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5].[ArrestDate_Month]' />
+            <map key='[ArrestDate_Quarter]' value='[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5].[ArrestDate_Quarter]' />
+            <map key='[ArrestDate_Year]' value='[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5].[ArrestDate_Year]' />
+            <map key='[Date_Key (Dim_Date)]' value='[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5].[Date_Key]' />
+            <map key='[Date_Key]' value='[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF].[Date_Key]' />
+            <map key='[Geo_SK (Dim_Geo)]' value='[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24].[Geo_SK]' />
+            <map key='[Geo_SK]' value='[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF].[Geo_SK]' />
+            <map key='[JURISDICTION_CODE]' value='[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF].[JURISDICTION_CODE]' />
+            <map key='[KY_CD]' value='[Dim_KYCD_3983427FA216483DB6A986B8C6B87FB0].[KY_CD]' />
+            <map key='[KY_SK (Dim_KYCD)]' value='[Dim_KYCD_3983427FA216483DB6A986B8C6B87FB0].[KY_SK]' />
+            <map key='[KY_SK]' value='[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF].[KY_SK]' />
+            <map key='[LAW_CAT_CD]' value='[Dim_CatCD_650F327698864652912A94D7867144C2].[LAW_CAT_CD]' />
+            <map key='[LAW_CODE]' value='[Dim_LawCode_C957BD167B4F4124BDCD94382371242B].[LAW_CODE]' />
+            <map key='[Latitude]' value='[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24].[Latitude]' />
+            <map key='[LawCat_SK (Dim_CatCD)]' value='[Dim_CatCD_650F327698864652912A94D7867144C2].[LawCat_SK]' />
+            <map key='[LawCat_SK]' value='[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF].[LawCat_SK]' />
+            <map key='[LawCode_SK (Dim_LawCode)]' value='[Dim_LawCode_C957BD167B4F4124BDCD94382371242B].[LawCode_SK]' />
+            <map key='[LawCode_SK]' value='[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF].[LawCode_SK]' />
+            <map key='[Longitude]' value='[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24].[Longitude]' />
+            <map key='[OFNS_DESC]' value='[Dim_KYCD_3983427FA216483DB6A986B8C6B87FB0].[OFNS_DESC]' />
+            <map key='[PD_CD]' value='[Dim_PDCD_D6971686FE1343AEA8CAF2DB1AB1587E].[PD_CD]' />
+            <map key='[PD_DESC]' value='[Dim_PDCD_D6971686FE1343AEA8CAF2DB1AB1587E].[PD_DESC]' />
+            <map key='[PD_SK (Dim_PDCD)]' value='[Dim_PDCD_D6971686FE1343AEA8CAF2DB1AB1587E].[PD_SK]' />
+            <map key='[PD_SK]' value='[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF].[PD_SK]' />
+            <map key='[PERP_RACE]' value='[Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144].[PERP_RACE]' />
+            <map key='[PERP_SEX]' value='[Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144].[PERP_SEX]' />
+            <map key='[Perpetrator_SK (Dim_PerpetratorDetails)]' value='[Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144].[Perpetrator_SK]' />
+            <map key='[Perpetrator_SK]' value='[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF].[Perpetrator_SK]' />
+            <map key='[X_COORD_CD]' value='[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24].[X_COORD_CD]' />
+            <map key='[Y_COORD_CD]' value='[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24].[Y_COORD_CD]' />
+          </cols>
+          <refresh>
+            <refresh-event add-from-file-path='Fact_Arrest+ (NYCArrests_YTDOnly)' increment-value='%null%' refresh-type='create' rows-inserted='191513' timestamp-start='2022-04-14 05:37:28.376' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>ARREST_KEY</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ARREST_KEY]</local-name>
+              <parent-name>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</parent-name>
+              <remote-alias>ARREST_KEY</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Fact_Arrest</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>155507</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date_Key</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Date_Key]</local-name>
+              <parent-name>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</parent-name>
+              <remote-alias>Date_Key</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Fact_Arrest</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1036</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PD_SK</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[PD_SK]</local-name>
+              <parent-name>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</parent-name>
+              <remote-alias>PD_SK</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Fact_Arrest</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>331</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>KY_SK</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[KY_SK]</local-name>
+              <parent-name>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</parent-name>
+              <remote-alias>KY_SK</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Fact_Arrest</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>74</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LawCode_SK</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[LawCode_SK]</local-name>
+              <parent-name>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</parent-name>
+              <remote-alias>LawCode_SK</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Fact_Arrest</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1077</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LawCat_SK</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[LawCat_SK]</local-name>
+              <parent-name>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</parent-name>
+              <remote-alias>LawCat_SK</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Fact_Arrest</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ArrestBoro_SK</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ArrestBoro_SK]</local-name>
+              <parent-name>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</parent-name>
+              <remote-alias>ArrestBoro_SK</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Fact_Arrest</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Perpetrator_SK</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Perpetrator_SK]</local-name>
+              <parent-name>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</parent-name>
+              <remote-alias>Perpetrator_SK</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Fact_Arrest</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>90</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Geo_SK</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Geo_SK]</local-name>
+              <parent-name>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</parent-name>
+              <remote-alias>Geo_SK</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Fact_Arrest</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>17378</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ARREST_PRECINCT</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ARREST_PRECINCT]</local-name>
+              <parent-name>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</parent-name>
+              <remote-alias>ARREST_PRECINCT</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Fact_Arrest</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>87</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>JURISDICTION_CODE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[JURISDICTION_CODE]</local-name>
+              <parent-name>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</parent-name>
+              <remote-alias>JURISDICTION_CODE</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Fact_Arrest</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ArrestBoro_SK</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ArrestBoro_SK (Dim_ArrestBoro)]</local-name>
+              <parent-name>[Dim_ArrestBoro_DC998C010EE048B9BF75D03D807C4FA7]</parent-name>
+              <remote-alias>ArrestBoro_SK</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Dim_ArrestBoro</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_ArrestBoro_DC998C010EE048B9BF75D03D807C4FA7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ArrestBoro_Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ArrestBoro_Type]</local-name>
+              <parent-name>[Dim_ArrestBoro_DC998C010EE048B9BF75D03D807C4FA7]</parent-name>
+              <remote-alias>ArrestBoro_Type</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Dim_ArrestBoro</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_ArrestBoro_DC998C010EE048B9BF75D03D807C4FA7]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LawCat_SK</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[LawCat_SK (Dim_CatCD)]</local-name>
+              <parent-name>[Dim_CatCD_650F327698864652912A94D7867144C2]</parent-name>
+              <remote-alias>LawCat_SK</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Dim_CatCD</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_CatCD_650F327698864652912A94D7867144C2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LAW_CAT_CD</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[LAW_CAT_CD]</local-name>
+              <parent-name>[Dim_CatCD_650F327698864652912A94D7867144C2]</parent-name>
+              <remote-alias>LAW_CAT_CD</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Dim_CatCD</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_CatCD_650F327698864652912A94D7867144C2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date_Key</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Date_Key (Dim_Date)]</local-name>
+              <parent-name>[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]</parent-name>
+              <remote-alias>Date_Key</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Dim_Date</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>365</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ArrestDate_AK</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[ArrestDate_AK]</local-name>
+              <parent-name>[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]</parent-name>
+              <remote-alias>ArrestDate_AK</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Dim_Date</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>365</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ArrestDate_Year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ArrestDate_Year]</local-name>
+              <parent-name>[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]</parent-name>
+              <remote-alias>ArrestDate_Year</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Dim_Date</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ArrestDate_Month</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ArrestDate_Month]</local-name>
+              <parent-name>[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]</parent-name>
+              <remote-alias>ArrestDate_Month</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Dim_Date</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ArrestDate_Day</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ArrestDate_Day]</local-name>
+              <parent-name>[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]</parent-name>
+              <remote-alias>ArrestDate_Day</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Dim_Date</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ArrestDate_Quarter</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ArrestDate_Quarter]</local-name>
+              <parent-name>[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]</parent-name>
+              <remote-alias>ArrestDate_Quarter</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Dim_Date</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Geo_SK</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Geo_SK (Dim_Geo)]</local-name>
+              <parent-name>[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24]</parent-name>
+              <remote-alias>Geo_SK</remote-alias>
+              <ordinal>21</ordinal>
+              <family>Dim_Geo</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>34217</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>X_COORD_CD</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[X_COORD_CD]</local-name>
+              <parent-name>[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24]</parent-name>
+              <remote-alias>X_COORD_CD</remote-alias>
+              <ordinal>22</ordinal>
+              <family>Dim_Geo</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>21016</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Y_COORD_CD</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Y_COORD_CD]</local-name>
+              <parent-name>[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24]</parent-name>
+              <remote-alias>Y_COORD_CD</remote-alias>
+              <ordinal>23</ordinal>
+              <family>Dim_Geo</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>29271</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Latitude</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Latitude]</local-name>
+              <parent-name>[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24]</parent-name>
+              <remote-alias>Latitude</remote-alias>
+              <ordinal>24</ordinal>
+              <family>Dim_Geo</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>34217</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Longitude</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Longitude]</local-name>
+              <parent-name>[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24]</parent-name>
+              <remote-alias>Longitude</remote-alias>
+              <ordinal>25</ordinal>
+              <family>Dim_Geo</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>34217</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>KY_SK</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[KY_SK (Dim_KYCD)]</local-name>
+              <parent-name>[Dim_KYCD_3983427FA216483DB6A986B8C6B87FB0]</parent-name>
+              <remote-alias>KY_SK</remote-alias>
+              <ordinal>26</ordinal>
+              <family>Dim_KYCD</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>76</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_KYCD_3983427FA216483DB6A986B8C6B87FB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>KY_CD</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[KY_CD]</local-name>
+              <parent-name>[Dim_KYCD_3983427FA216483DB6A986B8C6B87FB0]</parent-name>
+              <remote-alias>KY_CD</remote-alias>
+              <ordinal>27</ordinal>
+              <family>Dim_KYCD</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>67</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_KYCD_3983427FA216483DB6A986B8C6B87FB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OFNS_DESC</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[OFNS_DESC]</local-name>
+              <parent-name>[Dim_KYCD_3983427FA216483DB6A986B8C6B87FB0]</parent-name>
+              <remote-alias>OFNS_DESC</remote-alias>
+              <ordinal>28</ordinal>
+              <family>Dim_KYCD</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>64</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_KYCD_3983427FA216483DB6A986B8C6B87FB0]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LawCode_SK</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[LawCode_SK (Dim_LawCode)]</local-name>
+              <parent-name>[Dim_LawCode_C957BD167B4F4124BDCD94382371242B]</parent-name>
+              <remote-alias>LawCode_SK</remote-alias>
+              <ordinal>29</ordinal>
+              <family>Dim_LawCode</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1005</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_LawCode_C957BD167B4F4124BDCD94382371242B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LAW_CODE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[LAW_CODE]</local-name>
+              <parent-name>[Dim_LawCode_C957BD167B4F4124BDCD94382371242B]</parent-name>
+              <remote-alias>LAW_CODE</remote-alias>
+              <ordinal>30</ordinal>
+              <family>Dim_LawCode</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1005</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_LawCode_C957BD167B4F4124BDCD94382371242B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PD_SK</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[PD_SK (Dim_PDCD)]</local-name>
+              <parent-name>[Dim_PDCD_D6971686FE1343AEA8CAF2DB1AB1587E]</parent-name>
+              <remote-alias>PD_SK</remote-alias>
+              <ordinal>31</ordinal>
+              <family>Dim_PDCD</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>261</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_PDCD_D6971686FE1343AEA8CAF2DB1AB1587E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PD_CD</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[PD_CD]</local-name>
+              <parent-name>[Dim_PDCD_D6971686FE1343AEA8CAF2DB1AB1587E]</parent-name>
+              <remote-alias>PD_CD</remote-alias>
+              <ordinal>32</ordinal>
+              <family>Dim_PDCD</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>261</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_PDCD_D6971686FE1343AEA8CAF2DB1AB1587E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PD_DESC</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[PD_DESC]</local-name>
+              <parent-name>[Dim_PDCD_D6971686FE1343AEA8CAF2DB1AB1587E]</parent-name>
+              <remote-alias>PD_DESC</remote-alias>
+              <ordinal>33</ordinal>
+              <family>Dim_PDCD</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>242</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_PDCD_D6971686FE1343AEA8CAF2DB1AB1587E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Perpetrator_SK</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Perpetrator_SK (Dim_PerpetratorDetails)]</local-name>
+              <parent-name>[Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144]</parent-name>
+              <remote-alias>Perpetrator_SK</remote-alias>
+              <ordinal>34</ordinal>
+              <family>Dim_PerpetratorDetails</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>68</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PERP_SEX</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[PERP_SEX]</local-name>
+              <parent-name>[Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144]</parent-name>
+              <remote-alias>PERP_SEX</remote-alias>
+              <ordinal>35</ordinal>
+              <family>Dim_PerpetratorDetails</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PERP_RACE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[PERP_RACE]</local-name>
+              <parent-name>[Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144]</parent-name>
+              <remote-alias>PERP_RACE</remote-alias>
+              <ordinal>36</ordinal>
+              <family>Dim_PerpetratorDetails</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AgeGroup_SK</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[AgeGroup_SK]</local-name>
+              <parent-name>[Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144]</parent-name>
+              <remote-alias>AgeGroup_SK</remote-alias>
+              <ordinal>37</ordinal>
+              <family>Dim_PerpetratorDetails</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AgeGroup_SK</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[AgeGroup_SK (Dim_AgeGroup)]</local-name>
+              <parent-name>[Dim_AgeGroup_8515590984BC479192A376193F7EB89B]</parent-name>
+              <remote-alias>AgeGroup_SK</remote-alias>
+              <ordinal>38</ordinal>
+              <family>Dim_AgeGroup</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_AgeGroup_8515590984BC479192A376193F7EB89B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AGE_GROUP</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[AGE_GROUP]</local-name>
+              <parent-name>[Dim_AgeGroup_8515590984BC479192A376193F7EB89B]</parent-name>
+              <remote-alias>AGE_GROUP</remote-alias>
+              <ordinal>39</ordinal>
+              <family>Dim_AgeGroup</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Dim_AgeGroup_8515590984BC479192A376193F7EB89B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Dim_AgeGroup' id='Dim_AgeGroup_8515590984BC479192A376193F7EB89B'>
+            <properties context=''>
+              <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Dim_AgeGroup' table='[dbo].[Dim_AgeGroup]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Dim_AgeGroup_8515590984BC479192A376193F7EB89B' table='[Extract].[Dim_AgeGroup_8515590984BC479192A376193F7EB89B]' type='table' />
+            </properties>
+          </object>
+          <object caption='Dim_ArrestBoro' id='Dim_ArrestBoro_DC998C010EE048B9BF75D03D807C4FA7'>
+            <properties context=''>
+              <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Dim_ArrestBoro' table='[dbo].[Dim_ArrestBoro]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Dim_ArrestBoro_DC998C010EE048B9BF75D03D807C4FA7' table='[Extract].[Dim_ArrestBoro_DC998C010EE048B9BF75D03D807C4FA7]' type='table' />
+            </properties>
+          </object>
+          <object caption='Dim_CatCD' id='Dim_CatCD_650F327698864652912A94D7867144C2'>
+            <properties context=''>
+              <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Dim_CatCD' table='[dbo].[Dim_CatCD]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Dim_CatCD_650F327698864652912A94D7867144C2' table='[Extract].[Dim_CatCD_650F327698864652912A94D7867144C2]' type='table' />
+            </properties>
+          </object>
+          <object caption='Dim_Date' id='Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5'>
+            <properties context=''>
+              <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Dim_Date' table='[dbo].[Dim_Date]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5' table='[Extract].[Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5]' type='table' />
+            </properties>
+          </object>
+          <object caption='Dim_Geo' id='Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24'>
+            <properties context=''>
+              <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Dim_Geo' table='[dbo].[Dim_Geo]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24' table='[Extract].[Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24]' type='table' />
+            </properties>
+          </object>
+          <object caption='Dim_KYCD' id='Dim_KYCD_3983427FA216483DB6A986B8C6B87FB0'>
+            <properties context=''>
+              <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Dim_KYCD' table='[dbo].[Dim_KYCD]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Dim_KYCD_3983427FA216483DB6A986B8C6B87FB0' table='[Extract].[Dim_KYCD_3983427FA216483DB6A986B8C6B87FB0]' type='table' />
+            </properties>
+          </object>
+          <object caption='Dim_LawCode' id='Dim_LawCode_C957BD167B4F4124BDCD94382371242B'>
+            <properties context=''>
+              <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Dim_LawCode' table='[dbo].[Dim_LawCode]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Dim_LawCode_C957BD167B4F4124BDCD94382371242B' table='[Extract].[Dim_LawCode_C957BD167B4F4124BDCD94382371242B]' type='table' />
+            </properties>
+          </object>
+          <object caption='Dim_PDCD' id='Dim_PDCD_D6971686FE1343AEA8CAF2DB1AB1587E'>
+            <properties context=''>
+              <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Dim_PDCD' table='[dbo].[Dim_PDCD]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Dim_PDCD_D6971686FE1343AEA8CAF2DB1AB1587E' table='[Extract].[Dim_PDCD_D6971686FE1343AEA8CAF2DB1AB1587E]' type='table' />
+            </properties>
+          </object>
+          <object caption='Dim_PerpetratorDetails' id='Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144'>
+            <properties context=''>
+              <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Dim_PerpetratorDetails' table='[dbo].[Dim_PerpetratorDetails]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144' table='[Extract].[Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144]' type='table' />
+            </properties>
+          </object>
+          <object caption='Fact_Arrest' id='Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF'>
+            <properties context=''>
+              <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='Fact_Arrest' table='[dbo].[Fact_Arrest]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF' table='[Extract].[Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[AgeGroup_SK]' />
+              <expression op='[AgeGroup_SK (Dim_AgeGroup)]' />
+            </expression>
+            <first-end-point object-id='Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144' />
+            <second-end-point object-id='Dim_AgeGroup_8515590984BC479192A376193F7EB89B' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[ArrestBoro_SK]' />
+              <expression op='[ArrestBoro_SK (Dim_ArrestBoro)]' />
+            </expression>
+            <first-end-point object-id='Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF' />
+            <second-end-point object-id='Dim_ArrestBoro_DC998C010EE048B9BF75D03D807C4FA7' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[LawCat_SK]' />
+              <expression op='[LawCat_SK (Dim_CatCD)]' />
+            </expression>
+            <first-end-point object-id='Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF' />
+            <second-end-point object-id='Dim_CatCD_650F327698864652912A94D7867144C2' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Date_Key]' />
+              <expression op='[Date_Key (Dim_Date)]' />
+            </expression>
+            <first-end-point object-id='Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF' />
+            <second-end-point object-id='Dim_Date_552CA20F299740D2AE09CC78A5CEB9C5' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Geo_SK]' />
+              <expression op='[Geo_SK (Dim_Geo)]' />
+            </expression>
+            <first-end-point object-id='Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF' />
+            <second-end-point object-id='Dim_Geo_3C7F8416C38B441B9BFBE459A740BA24' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[KY_SK]' />
+              <expression op='[KY_SK (Dim_KYCD)]' />
+            </expression>
+            <first-end-point object-id='Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF' />
+            <second-end-point object-id='Dim_KYCD_3983427FA216483DB6A986B8C6B87FB0' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[LawCode_SK]' />
+              <expression op='[LawCode_SK (Dim_LawCode)]' />
+            </expression>
+            <first-end-point object-id='Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF' />
+            <second-end-point object-id='Dim_LawCode_C957BD167B4F4124BDCD94382371242B' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[PD_SK]' />
+              <expression op='[PD_SK (Dim_PDCD)]' />
+            </expression>
+            <first-end-point object-id='Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF' />
+            <second-end-point object-id='Dim_PDCD_D6971686FE1343AEA8CAF2DB1AB1587E' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Perpetrator_SK]' />
+              <expression op='[Perpetrator_SK (Dim_PerpetratorDetails)]' />
+            </expression>
+            <first-end-point object-id='Fact_Arrest_9D8B8522BDA1462CB033FE574BDEB0AF' />
+            <second-end-point object-id='Dim_PerpetratorDetails_973B1A2BDF9241058056183325D28144' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B93BA3AD-35FB-4B5E-978A-41621FC32469}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{179B3EC1-ED38-455F-9E5A-F1580DFAFCED}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BD358D92-92E9-4F20-B686-2A0ECA6B7EF9}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8E2F0E1A-7891-4144-A5E4-5C1B2DBC69B8}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

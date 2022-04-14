@@ -1,0 +1,918 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20214.22.0108.1039                               -->
+<workbook original-version='18.1' source-build='2021.4.3 (20214.22.0108.1039)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Fact_Arrest+ (NYCArrests_YTDOnly)' inline='true' name='federated.0fk500b0sbda0919i54dm1iynzwx' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='LAPTOP-B40PCB4S' name='sqlserver.0adunad0wedzpj11kklyp0fr8pwh'>
+            <connection IsolationLevel='ReadUncommitted' authentication='sspi' class='sqlserver' dbname='NYCArrests_YTDOnly' minimum-driver-version='SQL Server Native Client 10.0' odbc-native-protocol='yes' one-time-sql='' server='LAPTOP-B40PCB4S' sslmode='require' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='NYCArrests_YTDOnly_Staging' table='[dbo].[NYCArrests_YTDOnly_Staging]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='NYCArrests_YTDOnly_Staging' table='[dbo].[NYCArrests_YTDOnly_Staging]' type='table' />
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>ARREST_KEY</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ARREST_KEY]</local-name>
+            <parent-name>[NYCArrests_YTDOnly_Staging]</parent-name>
+            <remote-alias>ARREST_KEY</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ARREST_DATE</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ARREST_DATE]</local-name>
+            <parent-name>[NYCArrests_YTDOnly_Staging]</parent-name>
+            <remote-alias>ARREST_DATE</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PD_CD</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[PD_CD]</local-name>
+            <parent-name>[NYCArrests_YTDOnly_Staging]</parent-name>
+            <remote-alias>PD_CD</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PD_DESC</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[PD_DESC]</local-name>
+            <parent-name>[NYCArrests_YTDOnly_Staging]</parent-name>
+            <remote-alias>PD_DESC</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>KY_CD</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[KY_CD]</local-name>
+            <parent-name>[NYCArrests_YTDOnly_Staging]</parent-name>
+            <remote-alias>KY_CD</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OFNS_DESC</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[OFNS_DESC]</local-name>
+            <parent-name>[NYCArrests_YTDOnly_Staging]</parent-name>
+            <remote-alias>OFNS_DESC</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LAW_CODE</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[LAW_CODE]</local-name>
+            <parent-name>[NYCArrests_YTDOnly_Staging]</parent-name>
+            <remote-alias>LAW_CODE</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LAW_CAT_CD</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[LAW_CAT_CD]</local-name>
+            <parent-name>[NYCArrests_YTDOnly_Staging]</parent-name>
+            <remote-alias>LAW_CAT_CD</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ARREST_BORO</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ARREST_BORO]</local-name>
+            <parent-name>[NYCArrests_YTDOnly_Staging]</parent-name>
+            <remote-alias>ARREST_BORO</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ARREST_PRECINCT</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ARREST_PRECINCT]</local-name>
+            <parent-name>[NYCArrests_YTDOnly_Staging]</parent-name>
+            <remote-alias>ARREST_PRECINCT</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>JURISDICTION_CODE</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[JURISDICTION_CODE]</local-name>
+            <parent-name>[NYCArrests_YTDOnly_Staging]</parent-name>
+            <remote-alias>JURISDICTION_CODE</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AGE_GROUP</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[AGE_GROUP]</local-name>
+            <parent-name>[NYCArrests_YTDOnly_Staging]</parent-name>
+            <remote-alias>AGE_GROUP</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PERP_SEX</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[PERP_SEX]</local-name>
+            <parent-name>[NYCArrests_YTDOnly_Staging]</parent-name>
+            <remote-alias>PERP_SEX</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PERP_RACE</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[PERP_RACE]</local-name>
+            <parent-name>[NYCArrests_YTDOnly_Staging]</parent-name>
+            <remote-alias>PERP_RACE</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>X_COORD_CD</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[X_COORD_CD]</local-name>
+            <parent-name>[NYCArrests_YTDOnly_Staging]</parent-name>
+            <remote-alias>X_COORD_CD</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Y_COORD_CD</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Y_COORD_CD]</local-name>
+            <parent-name>[NYCArrests_YTDOnly_Staging]</parent-name>
+            <remote-alias>Y_COORD_CD</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[NYCArrests_YTDOnly_Staging]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[NYCArrests_YTDOnly_Staging]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>New Georeferenced Column</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[New Georeferenced Column]</local-name>
+            <parent-name>[NYCArrests_YTDOnly_Staging]</parent-name>
+            <remote-alias>New Georeferenced Column</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>254</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='2147483649' name='LEN_RUS_S2_VWIN' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Age Group' datatype='string' name='[AGE_GROUP]' role='dimension' type='nominal' />
+      <column caption='Arrest Boro' datatype='string' name='[ARREST_BORO]' role='dimension' type='nominal' />
+      <column caption='Arrest Date' datatype='string' name='[ARREST_DATE]' role='dimension' type='nominal' />
+      <column caption='Arrest Key' datatype='string' name='[ARREST_KEY]' role='dimension' type='nominal' />
+      <column caption='Arrest Precinct' datatype='string' name='[ARREST_PRECINCT]' role='dimension' type='nominal' />
+      <column caption='Jurisdiction Code' datatype='string' name='[JURISDICTION_CODE]' role='dimension' type='nominal' />
+      <column caption='Ky Cd' datatype='string' name='[KY_CD]' role='dimension' type='nominal' />
+      <column caption='Law Cat Cd' datatype='string' name='[LAW_CAT_CD]' role='dimension' type='nominal' />
+      <column caption='Law Code' datatype='string' name='[LAW_CODE]' role='dimension' type='nominal' />
+      <column caption='Latitude1' datatype='string' name='[Latitude]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+      <column caption='Longitude1' datatype='string' name='[Longitude]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+      <column caption='Ofns Desc' datatype='string' name='[OFNS_DESC]' role='dimension' type='nominal' />
+      <column caption='Pd Cd' datatype='string' name='[PD_CD]' role='dimension' type='nominal' />
+      <column caption='Pd Desc' datatype='string' name='[PD_DESC]' role='dimension' type='nominal' />
+      <column caption='Perp Race' datatype='string' name='[PERP_RACE]' role='dimension' type='nominal' />
+      <column caption='Perp Sex' datatype='string' name='[PERP_SEX]' role='dimension' type='nominal' />
+      <column caption='X Coord Cd' datatype='string' name='[X_COORD_CD]' role='dimension' type='nominal' />
+      <column caption='Y Coord Cd' datatype='string' name='[Y_COORD_CD]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='NYCArrests_YTDOnly_Staging' datatype='table' name='[__tableau_internal_object_id__].[NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31]' role='measure' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='E:/GitHub_Repositories/New-York-City-Arrests-Data-Modelling--Analysis-and-Visualization/Tableau/Fact_Arrest+ (NYCArrests_YTDOnly).hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>ARREST_KEY</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ARREST_KEY]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ARREST_KEY</remote-alias>
+              <ordinal>0</ordinal>
+              <family>NYCArrests_YTDOnly_Staging</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>155507</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ARREST_DATE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ARREST_DATE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ARREST_DATE</remote-alias>
+              <ordinal>1</ordinal>
+              <family>NYCArrests_YTDOnly_Staging</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1200</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PD_CD</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[PD_CD]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PD_CD</remote-alias>
+              <ordinal>2</ordinal>
+              <family>NYCArrests_YTDOnly_Staging</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>415</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PD_DESC</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[PD_DESC]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PD_DESC</remote-alias>
+              <ordinal>3</ordinal>
+              <family>NYCArrests_YTDOnly_Staging</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>414</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>KY_CD</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[KY_CD]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>KY_CD</remote-alias>
+              <ordinal>4</ordinal>
+              <family>NYCArrests_YTDOnly_Staging</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>103</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OFNS_DESC</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[OFNS_DESC]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>OFNS_DESC</remote-alias>
+              <ordinal>5</ordinal>
+              <family>NYCArrests_YTDOnly_Staging</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>89</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LAW_CODE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[LAW_CODE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LAW_CODE</remote-alias>
+              <ordinal>6</ordinal>
+              <family>NYCArrests_YTDOnly_Staging</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>999</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LAW_CAT_CD</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[LAW_CAT_CD]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LAW_CAT_CD</remote-alias>
+              <ordinal>7</ordinal>
+              <family>NYCArrests_YTDOnly_Staging</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ARREST_BORO</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ARREST_BORO]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ARREST_BORO</remote-alias>
+              <ordinal>8</ordinal>
+              <family>NYCArrests_YTDOnly_Staging</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ARREST_PRECINCT</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ARREST_PRECINCT]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ARREST_PRECINCT</remote-alias>
+              <ordinal>9</ordinal>
+              <family>NYCArrests_YTDOnly_Staging</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>76</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>JURISDICTION_CODE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[JURISDICTION_CODE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>JURISDICTION_CODE</remote-alias>
+              <ordinal>10</ordinal>
+              <family>NYCArrests_YTDOnly_Staging</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>41</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AGE_GROUP</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[AGE_GROUP]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>AGE_GROUP</remote-alias>
+              <ordinal>11</ordinal>
+              <family>NYCArrests_YTDOnly_Staging</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PERP_SEX</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[PERP_SEX]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PERP_SEX</remote-alias>
+              <ordinal>12</ordinal>
+              <family>NYCArrests_YTDOnly_Staging</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>PERP_RACE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[PERP_RACE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>PERP_RACE</remote-alias>
+              <ordinal>13</ordinal>
+              <family>NYCArrests_YTDOnly_Staging</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>X_COORD_CD</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[X_COORD_CD]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>X_COORD_CD</remote-alias>
+              <ordinal>14</ordinal>
+              <family>NYCArrests_YTDOnly_Staging</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15965</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Y_COORD_CD</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Y_COORD_CD]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Y_COORD_CD</remote-alias>
+              <ordinal>15</ordinal>
+              <family>NYCArrests_YTDOnly_Staging</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>16702</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Latitude</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Latitude</remote-alias>
+              <ordinal>16</ordinal>
+              <family>NYCArrests_YTDOnly_Staging</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>16862</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Longitude</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Longitude</remote-alias>
+              <ordinal>17</ordinal>
+              <family>NYCArrests_YTDOnly_Staging</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>16862</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>New Georeferenced Column</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[New Georeferenced Column]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>New Georeferenced Column</remote-alias>
+              <ordinal>18</ordinal>
+              <family>NYCArrests_YTDOnly_Staging</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>16862</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='NYCArrests_YTDOnly_Staging' id='NYCArrests_YTDOnly_Staging_8209A86D2FBF40F7AC80A3A45A802A31'>
+            <properties context=''>
+              <relation connection='sqlserver.0adunad0wedzpj11kklyp0fr8pwh' name='NYCArrests_YTDOnly_Staging' table='[dbo].[NYCArrests_YTDOnly_Staging]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Fact_Arrest+ (NYCArrests_YTDOnly)' name='federated.0fk500b0sbda0919i54dm1iynzwx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0fk500b0sbda0919i54dm1iynzwx'>
+            <column caption='Age Group' datatype='string' name='[AGE_GROUP]' role='dimension' type='nominal' />
+            <column-instance column='[AGE_GROUP]' derivation='None' name='[none:AGE_GROUP:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0fk500b0sbda0919i54dm1iynzwx].[none:AGE_GROUP:nk]'>
+            <groupfilter from='&quot;&lt;18&quot;' function='range' level='[none:AGE_GROUP:nk]' to='&quot;65+&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0fk500b0sbda0919i54dm1iynzwx].[none:AGE_GROUP:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0fk500b0sbda0919i54dm1iynzwx].[none:AGE_GROUP:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0fk500b0sbda0919i54dm1iynzwx].[none:AGE_GROUP:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{B93BA3AD-35FB-4B5E-978A-41621FC32469}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Fact_Arrest+ (NYCArrests_YTDOnly)' name='federated.0fk500b0sbda0919i54dm1iynzwx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0fk500b0sbda0919i54dm1iynzwx'>
+            <column caption='Ky Cd' datatype='string' name='[KY_CD]' role='dimension' type='nominal' />
+            <column-instance column='[KY_CD]' derivation='None' name='[none:KY_CD:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0fk500b0sbda0919i54dm1iynzwx].[none:KY_CD:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{179B3EC1-ED38-455F-9E5A-F1580DFAFCED}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Fact_Arrest+ (NYCArrests_YTDOnly)' name='federated.0fk500b0sbda0919i54dm1iynzwx' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0fk500b0sbda0919i54dm1iynzwx'>
+            <column caption='Latitude1' datatype='string' name='[Latitude]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column caption='Longitude1' datatype='string' name='[Longitude]' role='dimension' semantic-role='[Country].[Name]' type='nominal' />
+            <column-instance column='[Latitude]' derivation='None' name='[none:Latitude:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Longitude]' derivation='None' name='[none:Longitude:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <lod column='[federated.0fk500b0sbda0919i54dm1iynzwx].[none:Latitude:nk]' />
+              <lod column='[federated.0fk500b0sbda0919i54dm1iynzwx].[none:Longitude:nk]' />
+              <geometry column='[federated.0fk500b0sbda0919i54dm1iynzwx].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0fk500b0sbda0919i54dm1iynzwx].[Latitude (generated)]</rows>
+        <cols>[federated.0fk500b0sbda0919i54dm1iynzwx].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{6D6FB806-0F77-47A0-B25C-8675EF066E14}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0fk500b0sbda0919i54dm1iynzwx].[none:AGE_GROUP:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BD358D92-92E9-4F20-B686-2A0ECA6B7EF9}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8E2F0E1A-7891-4144-A5E4-5C1B2DBC69B8}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3AF6E28E-A9CE-4040-91FA-6493F73B9E80}' />
+    </window>
+  </windows>
+</workbook>

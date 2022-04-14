@@ -11,6 +11,12 @@
           <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
           <Disabled value="True" />
           <Folded value="False" />
+          <Caption>HistoricData_IntoStaging</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Caption>HistoricData_IntoStaging</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -101,7 +107,7 @@
                 <SelectField field="Y_COORD_CD" selected="True" />
                 <SelectField field="Latitude" selected="True" />
                 <SelectField field="Longitude" selected="True" />
-                <SelectField field="New Georeferenced Column" selected="True" />
+                <SelectField field="Lon_Lat" selected="True" />
                 <SelectField field="*Unknown" selected="False" />
               </SelectFields>
             </Configuration>
@@ -129,6 +135,29 @@
                 <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
                 <SpatialObjSize>8000</SpatialObjSize>
                 <OutputOption>Append</OutputOption>
+                <AppendMap>
+                  <AppendMapping mode="Custom">
+                    <Field Source="ARREST_KEY" Dest="ARREST_KEY" />
+                    <Field Source="ARREST_DATE" Dest="ARREST_DATE" />
+                    <Field Source="PD_CD" Dest="PD_CD" />
+                    <Field Source="PD_DESC" Dest="PD_DESC" />
+                    <Field Source="KY_CD" Dest="KY_CD" />
+                    <Field Source="OFNS_DESC" Dest="OFNS_DESC" />
+                    <Field Source="LAW_CODE" Dest="LAW_CODE" />
+                    <Field Source="LAW_CAT_CD" Dest="LAW_CAT_CD" />
+                    <Field Source="ARREST_BORO" Dest="ARREST_BORO" />
+                    <Field Source="ARREST_PRECINCT" Dest="ARREST_PRECINCT" />
+                    <Field Source="JURISDICTION_CODE" Dest="JURISDICTION_CODE" />
+                    <Field Source="AGE_GROUP" Dest="AGE_GROUP" />
+                    <Field Source="PERP_SEX" Dest="PERP_SEX" />
+                    <Field Source="PERP_RACE" Dest="PERP_RACE" />
+                    <Field Source="X_COORD_CD" Dest="X_COORD_CD" />
+                    <Field Source="Y_COORD_CD" Dest="Y_COORD_CD" />
+                    <Field Source="Latitude" Dest="Latitude" />
+                    <Field Source="Longitude" Dest="Longitude" />
+                    <Field Source="Lon_Lat" Dest="New Georeferenced Column" />
+                  </AppendMapping>
+                </AppendMap>
                 <PostSQL />
                 <TransactionSize>10000</TransactionSize>
                 <TableStyle>Quoted</TableStyle>
@@ -158,14 +187,8 @@ Query=NYCArrest_Staging</DefaultAnnotationText>
         <Configuration>
           <Caption>YTDData_IntoStaging</Caption>
           <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-          <Disabled value="False" />
-          <Folded value="False" />
-          <Caption>YTDData_IntoStaging</Caption>
-          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-          <Disabled value="False" />
-          <Caption>YTDData_IntoStaging</Caption>
-          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
           <Disabled value="True" />
+          <Folded value="False" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />

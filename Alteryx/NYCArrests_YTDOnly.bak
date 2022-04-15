@@ -615,7 +615,6 @@ Query=Dim_AgeGroup</DefaultAnnotationText>
             <Configuration>
               <File MaxRecords="" FileFormat="23">aka:LAPTOP-B40PCB4S|||Dim_ArrestBoro</File>
               <Passwords />
-              <CachedCosmeticName />
               <FormatSpecificOptions>
                 <TransactionMessages>False</TransactionMessages>
                 <Geometry>True</Geometry>
@@ -636,9 +635,6 @@ Query=Dim_AgeGroup</DefaultAnnotationText>
 Query=Dim_ArrestBoro</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>

@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="114" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>\t</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>NYPD_Arrest_Data__Year_to_Date_.tsv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ARREST_KEY" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+            <Field name="ARREST_DATE" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+            <Field name="PD_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+            <Field name="PD_DESC" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+            <Field name="KY_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+            <Field name="OFNS_DESC" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+            <Field name="LAW_CODE" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+            <Field name="LAW_CAT_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+            <Field name="ARREST_BORO" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+            <Field name="ARREST_PRECINCT" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+            <Field name="JURISDICTION_CODE" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+            <Field name="AGE_GROUP" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+            <Field name="PERP_SEX" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+            <Field name="PERP_RACE" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+            <Field name="X_COORD_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+            <Field name="Y_COORD_CD" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+            <Field name="Latitude" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+            <Field name="Longitude" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+            <Field name="New Georeferenced Column" size="254" source="File: E:\MS_STUDY\Study\AA_SEM_2\DADABI\Assignment\Assignment9_NYC_ArrestsDataset\NYC Arrests Dataset\NYPD_Arrest_Data__Year_to_Date_.tsv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="198" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="ARREST_DATE" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="702" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="MainDate" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="798" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\kunal\AppData\Local\Temp\Engine_17760_962b495d7a13417fa0cf1ed2cf2a0a9d_\Engine_7072_70d592713dc74fbcbe1de9dc0da06edd_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="366" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF DateTimeMonth([ArrestDate_AK]) IN (1,2,3) THEN &quot;1&quot;&#xA;ELSEIF DateTimeMonth([ArrestDate_AK]) IN (4,5,6) THEN &quot;2&quot; &#xA;ELSEIF DateTimeMonth([ArrestDate_AK]) IN (7,8,9) THEN &quot;3&quot; &#xA;ELSE &quot;4&quot; ENDIF" field="MainDate" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>MainDate = IF DateTimeMonth([ArrestDate_AK]) IN (1,2,3) THEN "1"
+ELSEIF DateTime...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="282" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeParse([ARREST_DATE],&quot;%m-%d-%Y&quot;)" field="ArrestDate_AK" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[ArrestDate_AK = DateTimeParse([ARREST_DATE],"%m-%d-%Y")
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>New Workflow3</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="3b6a6348-51bd-4fb8-aa62-722bcaeb0871" />
+      <Telemetry>
+        <PreviousWorkflowId value="26d181e9-c58c-464d-a3f1-d20a2a4249b3" />
+        <OriginWorkflowId value="26d181e9-c58c-464d-a3f1-d20a2a4249b3" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
